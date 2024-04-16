@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="FFYUd6LIyMkMRyEP06PP0l" LanguageVersion="2024.6.2" Version="0.128">
+  <NugetDependency Id="J5PFRfHtSZMNC0zfiIIIet" Location="VL.CoreLib" Version="2024.6.2" />
+  <Patch Id="NUBe8NqAL2GMxWdacl3vya">
+    <Canvas Id="GtbeV4cybmyPHHOx974pit" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="JZIhFchY4DeLvuI6FtnSRL">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="JaCZArn3ecrPZlELKcP3Uy">
+        <Canvas Id="O1VFRyEj3TpMiQKv8PWcCn" CanvasType="Group">
+          <Node Bounds="301,311,105,19" Id="NKUDp5YELhjLfDsfJoCif5">
+            <p:NodeReference LastCategoryFullName="IO.BlueIOT" LastDependency="VL.BlueIOT.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="BlueIOT" />
+            </p:NodeReference>
+            <Pin Id="K9zkwMlYQpELBDhTW74jqW" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CrEYaw4SGDEPXfmL4x63Hs" Name="IP" Kind="InputPin" />
+            <Pin Id="Ru1w8nyGBhuM4mtTTxOQRM" Name="Port" Kind="InputPin" />
+            <Pin Id="Jq5txR52k6rOq0xvqYDNw2" Name="User Name" Kind="InputPin" />
+            <Pin Id="Rs2TRyo53uUMxs0JdFrpvg" Name="Password" Kind="InputPin" />
+            <Pin Id="QzNZxTRoVsfLg8xRJV3Tg3" Name="Salt" Kind="InputPin" />
+            <Pin Id="RFN10zTlcLFN750dsL9l3n" Name="Is Wss" Kind="InputPin" />
+            <Pin Id="FrrDd4cPAmHLMiTC1OMrUK" Name="Messages" Kind="OutputPin" />
+            <Pin Id="N9rVO1ocXckMBQHrWorYRX" Name="Status" Kind="OutputPin" />
+            <Pin Id="EZgvNMxJTD0MUDtl91cfTe" Name="SDK Version" Kind="OutputPin" />
+          </Node>
+          <Pad Id="K6v8PlqsylnPxq9m2uCntI" Comment="" Bounds="576,365,41,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="273,403,36,19" Id="PYDpCr8FEMaLGrVrpoob4N">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="S+H" />
+            </p:NodeReference>
+            <Pin Id="LELvLp0d8xBMyOuYNwNCPd" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="J1wHjqJV6exMRJr6jSY2LP" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="TUEiIj4eYf2OvKLDnK3HfF" Name="Notifications" Kind="OutputPin" />
+            <Pin Id="SXg8AydDWCAMcX2zNzQaiB" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FLXYP1kTQRjOA22w7DVCOS" Comment="" Bounds="265,476,190,132" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="482,398,36,19" Id="O3upVPKXgxiPzHNcAkcIka">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Reactive" />
+              <Choice Kind="ProcessAppFlag" Name="S+H" />
+            </p:NodeReference>
+            <Pin Id="HqjmH1EZ0UKMR7G042Vjxz" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="I7V2LCCQhbcL5LOxnlphgv" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="QnddMlmrrTWQRwKCI8tObD" Name="Notifications" Kind="OutputPin" />
+            <Pin Id="R9XrawZOEdLPHGGolpUp4W" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="S70xA0BOc2rLna4TNZOhTQ" Comment="" Bounds="491,476,190,132" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="Pt4Qorr855iMfiwQU092vr" Name="Create" />
+        <Patch Id="B30Vp1XuVgMMiTstJg5SRq" Name="Update" />
+        <ProcessDefinition Id="C12rWIEbmmOQPVwKa2BEmC">
+          <Fragment Id="EhPA6pZ0wFDMy9isT08mmn" Patch="Pt4Qorr855iMfiwQU092vr" Enabled="true" />
+          <Fragment Id="OlsT1TJQdrANSZE2YVTuEH" Patch="B30Vp1XuVgMMiTstJg5SRq" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="FtO0Dlspu1hMjfjde2Fm7y" Ids="EZgvNMxJTD0MUDtl91cfTe,K6v8PlqsylnPxq9m2uCntI" />
+        <Link Id="PbRBLSrKH9MLuo3bB6OCwS" Ids="FrrDd4cPAmHLMiTC1OMrUK,J1wHjqJV6exMRJr6jSY2LP" />
+        <Link Id="Ur0TEUwHU2eM2wXUIEVR7o" Ids="TUEiIj4eYf2OvKLDnK3HfF,FLXYP1kTQRjOA22w7DVCOS" />
+        <Link Id="DWN2jvah69gL8Mv36oiDpk" Ids="N9rVO1ocXckMBQHrWorYRX,I7V2LCCQhbcL5LOxnlphgv" />
+        <Link Id="SU2ulKWxblVMldyomET2Sn" Ids="QnddMlmrrTWQRwKCI8tObD,S70xA0BOc2rLna4TNZOhTQ" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="AkJNtRfdAnyMXkJTQGAxNr" Location="VL.BlueIOT" Version="0.0.0" />
+</Document>
