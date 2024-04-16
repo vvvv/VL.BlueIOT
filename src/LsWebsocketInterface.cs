@@ -42,14 +42,61 @@ namespace LsWebsocketClient
 
         public event LsWebsocketMessageHandle MessageEvent;
 
+        void InvokeMessageEvent(LsFrameType frameType, object data)
+        {
+            MessageEvent?.Invoke(frameType, data);
+            MessageEvent2?.Invoke(this, new LSMessageHandle(frameType, data));
+        }
+
+        public struct LSMessageHandle
+        {
+            public LsFrameType FrameType;
+            public object Data;
+
+            public LSMessageHandle(LsFrameType frameType, object data)
+            {
+                FrameType = frameType;
+                Data = data;
+            }
+        }
+
+        public event EventHandler<LSMessageHandle> MessageEvent2;
+
+
+
+
+
         public delegate void LsWebsocketStatusHandle(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol);
 
         public event LsWebsocketStatusHandle WebsocketStatusEvent;
+
+        void InvokeWebSocketStatusEvent(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol)
+        {
+            WebsocketStatusEvent?.Invoke(status, subProtocol);
+            WebsocketStatusEvent2?.Invoke(this, new LSStatusHandle(status, subProtocol));
+        }
+
+        public struct LSStatusHandle
+        {
+            public LsWebsocketStatus Status;
+            public LsWebsocketSubProtocol SubProtocol;
+
+            public LSStatusHandle(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol)
+            {
+                Status = status;
+                SubProtocol = subProtocol;
+            }
+        }
+
+        public event EventHandler<LSStatusHandle> WebsocketStatusEvent2;
 
         public LsWebsocketInterface(LsWebsocketParams lsWebsocketParams)
         {
             this._lsWebsocketParams = lsWebsocketParams;
         }
+
+
+
 
         public void Connect2Server()
         {
@@ -144,15 +191,15 @@ namespace LsWebsocketClient
 
         private void HandleOpen(object sender, EventArgs eventArgs)
         {
-            if (sender == _wsCtrl && WebsocketStatusEvent != null)
+            if (sender == _wsCtrl)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
                     LsWebsocketSubProtocol.SubProtocolCtrl);
             }
 
-            if (sender == _wsRealData && WebsocketStatusEvent != null)
+            if (sender == _wsRealData)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
                     LsWebsocketSubProtocol.SubProtocolRealTimeData);
             }
             ((WebSocket)sender).Send(LsProtocol.GetAuth(_lsWebsocketParams.Username,
@@ -161,15 +208,15 @@ namespace LsWebsocketClient
 
         private void HandleClose(object sender, CloseEventArgs eventArgs)
         {
-            if (sender == _wsCtrl && WebsocketStatusEvent != null)
+            if (sender == _wsCtrl)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
                     LsWebsocketSubProtocol.SubProtocolCtrl);
             }
 
-            if (sender == _wsRealData && WebsocketStatusEvent != null)
+            if (sender == _wsRealData )
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
                     LsWebsocketSubProtocol.SubProtocolRealTimeData);
             }
 
@@ -186,81 +233,76 @@ namespace LsWebsocketClient
 
         private void HandleError(object sender, ErrorEventArgs eventArgs)
         {
-            if (sender == _wsCtrl && WebsocketStatusEvent != null)
+            if (sender == _wsCtrl)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
                     LsWebsocketSubProtocol.SubProtocolCtrl);
             }
 
-            if (sender == _wsRealData && WebsocketStatusEvent != null)
+            if (sender == _wsRealData)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
                     LsWebsocketSubProtocol.SubProtocolRealTimeData);
             }
         }
 
         private void HandleMessage(byte[] data)
         {
-            if (MessageEvent == null)
-            {
-                return;
-            }
-
             var type = LsProtocol.GetFrameType(data);
             switch (type)
             {
                 case LsFrameType.FrameTypePosition:
-                    MessageEvent(type, LsProtocol.DecodePosition(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodePosition(data));
                     break;
 
                 case LsFrameType.FrameTypeWgsPosition:
-                    MessageEvent(type, LsProtocol.DecodeWgsPosition(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodeWgsPosition(data));
                     break;
 
                 case LsFrameType.FrameTypeGlobalPosition:
-                    MessageEvent(type, LsProtocol.DecodePosition(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodePosition(data));
                     break;
 
                 case LsFrameType.FrameTypeAlarmEx:
-                    MessageEvent(type, LsProtocol.DecodeAlarmInfo(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodeAlarmInfo(data));
                     break;
 
                 case LsFrameType.FrameTypeJsonVideoTraceRes:
-                    MessageEvent(type, 
+                    InvokeMessageEvent(type, 
                         LsProtocol.DecodeTagVideoTrace(Encoding.ASCII.GetString(data)));
                     break;
 
                 case LsFrameType.FrameTypeAreaInOut:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeAreaInOut(data));
                     break;
 
                 case LsFrameType.FrameTypeBattery:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeBattery(data));
                     break;
 
                 case LsFrameType.FrameTypeBaseStatus:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeBaseStatus(data));
                     break;
 
                 case LsFrameType.FrameTypeExternData:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeTagExtendData(data));
                     break;
 
                 case LsFrameType.FrameTypeAreaStatistics:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeAreaStatistics(data));
                     break;
 
                 case LsFrameType.FrameTypeTagCountStatistics:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeTagCountStatistics(data));
                     break;
                 case LsFrameType.FrameTypeCustomIot:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeCustomIot(data));
                     break;
             }
