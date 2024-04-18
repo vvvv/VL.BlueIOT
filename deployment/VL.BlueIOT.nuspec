@@ -3,8 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.BlueIOT</id>
-    <!-- For more about versions see: https://thegraybook.vvvv.org/reference/extending/publishing.html#version -->
-    <version>0.0.3-alpha</version>
+    <version>0.0.4-alpha</version>
     <title>VL.BlueIOT</title>
     <authors>vvvv</authors>
     <projectUrl>https://github.com/vvvv/VL.BlueIOT</projectUrl>
@@ -14,6 +13,10 @@
     <license type="expression">LGPL-3.0-only</license>
     <icon>icon\nugeticon.png</icon>
     <readme>docs\README.md</readme>
+    <dependencies>
+		<dependency id="WebSocketSharp" version="1.0.3-rc11" />
+		<dependency id="Newtonsoft.Json" version="13.0.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\lib\**\*.dll" target="lib\" exclude="" />
