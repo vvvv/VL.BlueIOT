@@ -2,7 +2,7 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="EpNhJx3oilAOXp6nCqrw8k" LanguageVersion="2024.6.2" Version="0.128">
   <NugetDependency Id="DB0ZwREP8dmNR0m89D4SrS" Location="VL.CoreLib" Version="2024.6.2" />
   <Patch Id="KPCaPrMgaLbMYPRWv86mpR">
-    <Canvas Id="GpJWlm3vs6VP558X2PjvXH" DefaultCategory="IO.BlueIOT" CanvasType="FullCategory">
+    <Canvas Id="GpJWlm3vs6VP558X2PjvXH" DefaultCategory="Devices.BlueIOT" CanvasType="FullCategory">
       <!--
 
     ************************ BlueIOT ************************
@@ -197,7 +197,7 @@
                         <Patch Id="J2azQKQTA0LLtx9aiP9Cmj" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="Fg2hPLhxI0uNAD1vUn1eRb" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="600,1221,102,19" Id="BM0Z1IveBW3MeKeaJEEOJo">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="FrameTypePosition" />
                           </p:NodeReference>
@@ -222,7 +222,7 @@
                         <Patch Id="FO0JEyIgXZlNb34FKevkSl" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="Ktpfch5v9kjLyAczv1Zzj9" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="595,1419,116,19" Id="UtCtfDVvddZMlGy4wNdRxj">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="FrameTypeExternData" />
                           </p:NodeReference>
@@ -256,7 +256,7 @@
                         <Patch Id="UHthp17iXVXMuJFevojTrE" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="EHhd3SbTHZNPT8oZgmZdak" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="595,1599,98,19" Id="IM2T62AKEmWOikK15yue9j">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="FrameTypeBattery" />
                           </p:NodeReference>
@@ -1287,8 +1287,8 @@
           <Link Id="G91Wq8ZUcoyNt2EOBwFFkU" Ids="P8qRxTutNqXLLRiv9m7Tre,RYx6V1KeTsGQMJX5b1BISO" />
           <Link Id="LSGbzQapiJALCR1Rrv9p0d" Ids="NAw6rv818mtL2Nuvoza83v,PK0xRvNRbbqOVwWFrkMRK1" />
           <Link Id="ApOzRnXT5sHNYfVssQcDxV" Ids="PK0xRvNRbbqOVwWFrkMRK1,K8EVi02CatjOA1TP1eiSi4" />
-          <Patch Id="JfByw3ypGFIL7bvg01Aswm" Name="Create" />
-          <Patch Id="TNjiHhEr4YJQUI0PpYc1mC" Name="Update" ManuallySortedPins="true">
+          <Patch Id="JfByw3ypGFIL7bvg01Aswm" Name="Create (Internal)" />
+          <Patch Id="TNjiHhEr4YJQUI0PpYc1mC" Name="Update (Internal)" ManuallySortedPins="true">
             <Pin Id="QcCSV8hXT9eOSX8x2ht26D" Name="Tags" Kind="OutputPin" />
             <Pin Id="GkMOUvLTOHkQACXuRScQvF" Name="Status" Kind="OutputPin" />
             <Pin Id="TlsTSHfGm5GOXXGB9lbzc3" Name="IP" Kind="InputPin" />
