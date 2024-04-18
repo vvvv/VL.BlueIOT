@@ -484,7 +484,7 @@
                             <Patch Id="Ss8rHBPNISdPZoDZ77OVuq" Name="Create" ManuallySortedPins="true" />
                             <Patch Id="Vx4PfIqKj6kOT35XFKL4UR" Name="Then" ManuallySortedPins="true" />
                             <Node Bounds="1407,2061,46,26" Id="Pm7nxpA7PiBOdgYf87oyaw">
-                              <p:NodeReference LastCategoryFullName="IO.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                              <p:NodeReference LastCategoryFullName="Devices.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
                                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                 <CategoryReference Kind="RecordType" Name="Tag" />
                                 <Choice Kind="OperationCallFlag" Name="Create" />
@@ -560,7 +560,7 @@
                           <Pin Id="Ap5pJbTmztwNDPoVjd3AD1" Name="ZPos" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="1396,2233,185,26" Id="FYRCBrWklbKOSEoShDCqE6">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="Tag" NeedsToBeDirectParent="true" />
                             <Choice Kind="OperationCallFlag" Name="SetPositionData" />
@@ -802,7 +802,7 @@
                         <Patch Id="Itw289q0BMDOk5XVDoCeaE" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="QrgCzMxv8e1Ld0tahgJqvc" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="2079,1878,46,26" Id="DWQRRxhwWHRQFfiILigJXE">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="Tag" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
@@ -822,7 +822,7 @@
                       <Pin Id="MCnsrwC3fPANuq2IMuwsrD" Name="Output" Kind="StateOutputPin" />
                     </Node>
                     <Node Bounds="2067,1983,62,26" Id="ES9fwI9QaAWQZqUxvwkg7D">
-                      <p:NodeReference LastCategoryFullName="IO.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                      <p:NodeReference LastCategoryFullName="Devices.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="SetBattery" />
                       </p:NodeReference>
@@ -987,7 +987,7 @@
                         <Patch Id="RTrYkTwGNTMOnsFqKXxd6j" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="CxB5sCulNM3L4OOHO5tVJc" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="1468,2804,46,26" Id="QEltf4i0p1MLOtfkYhszdb">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="Tag" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1019,7 +1019,7 @@
                         <Patch Id="LbWLcagh9hdL4ZZTmyKZNm" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="I02i30kze5eLRriQAPxyah" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="1443,3016,74,26" Id="PCnho1YN2WfLjATtVIXbqr">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="Tag" NeedsToBeDirectParent="true" />
                             <Choice Kind="OperationCallFlag" Name="SetHeartRate" />
@@ -1067,7 +1067,7 @@
                         <Patch Id="OuFIY76V9b4OILybJKcOk7" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="V3ogDTCre0TN0Pq6OhZL8K" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="1441,3161,93,26" Id="Jw2b7zY8cJsNImGMxwcuIz">
-                          <p:NodeReference LastCategoryFullName="IO.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetExternData" />
                           </p:NodeReference>
@@ -1194,7 +1194,7 @@
               </p:TypeAnnotation>
             </Pad>
             <ControlPoint Id="NBEQ9c5pP5xL4i1hiF5iq9" Bounds="620,1796" />
-            <Node Bounds="493,1856,159,306" Id="GYhY5lVrbd9PLezqMWnZI1">
+            <Node Bounds="493,1856,200,306" Id="GYhY5lVrbd9PLezqMWnZI1">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -1222,7 +1222,7 @@
                   <Pin Id="BcGRmzdAjV2MoyER7dY2ox" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="Fnz4q9pEdOkNVdefDQ0aZr" Name="Apply" Kind="InputPin" />
                 </Node>
-                <Node Bounds="584,1879,56,19" Id="CmPRhuazAiBMCzuZaNtdeS">
+                <Node Bounds="613,1914,56,19" Id="CmPRhuazAiBMCzuZaNtdeS">
                   <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="TogEdge" />
@@ -1231,6 +1231,24 @@
                   <Pin Id="Pziqt9a8Ib9ME6vlcr0FKF" Name="Value" Kind="InputPin" />
                   <Pin Id="T3ivXW0uNPgPT0Mnfc78lO" Name="Up Edge" Kind="OutputPin" />
                   <Pin Id="EgJEk8CtizmNJ4Cx49V7Sr" Name="Down Edge" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="607,2003,30,19" Id="UOAyxiGcJfoO9qv5eaTlUl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="OR" />
+                  </p:NodeReference>
+                  <Pin Id="EFMB2re1B7dMnXEEQVlhVW" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="SAaWvjmS4JELh6dNWsRq5v" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="LPsSdCFtUU4LhqzargvKOS" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="644,1962,37,19" Id="EFkLgeTMS7gOldE5v3DzIY">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="AND" />
+                  </p:NodeReference>
+                  <Pin Id="MQcX6D2tEGpNVbxv5Jo9ad" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="L3aun5eOYoiN3YIT56ARWD" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="Ak1nrU55RGMM6eHJL0Oa2Y" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
               <ControlPoint Id="BivGW2Vo6GWMTkIzP4NGTK" Bounds="509,1862" Alignment="Top" />
@@ -1291,8 +1309,8 @@
           <Patch Id="TNjiHhEr4YJQUI0PpYc1mC" Name="Update (Internal)" ManuallySortedPins="true">
             <Pin Id="QcCSV8hXT9eOSX8x2ht26D" Name="Tags" Kind="OutputPin" />
             <Pin Id="GkMOUvLTOHkQACXuRScQvF" Name="Status" Kind="OutputPin" />
-            <Pin Id="TlsTSHfGm5GOXXGB9lbzc3" Name="IP" Kind="InputPin" />
-            <Pin Id="KKobHoRD12iMj9AHt80YAb" Name="Port" Kind="InputPin" />
+            <Pin Id="TlsTSHfGm5GOXXGB9lbzc3" Name="IP" Kind="InputPin" DefaultValue="" />
+            <Pin Id="KKobHoRD12iMj9AHt80YAb" Name="Port" Kind="InputPin" DefaultValue="48300" />
             <Pin Id="DhQERuUr8MJMjFRaEOoDcD" Name="User Name" Kind="InputPin" />
             <Pin Id="VFqNaG17TytQchwHya1iVW" Name="Password" Kind="InputPin" />
             <Pin Id="NgphCIXdeZ3Ob3VCsxyoD1" Name="Salt" Kind="InputPin" />
@@ -1371,7 +1389,7 @@
           <Link Id="C2ndtWEcQK4MMcS5z4LA6O" Ids="Fq0jWx36cR5OBynva4gyyN,NBEQ9c5pP5xL4i1hiF5iq9" IsHidden="true" />
           <Link Id="Eqjj6WPsOZwO8hu9MyFUW7" Ids="NoYoY4fNOCSPYe19vI8aOS,QtD2Sv1IeVRPm9gip1mQIo" />
           <Link Id="KNWuCwIKUZ3QK1Ikw46mdz" Ids="NBEQ9c5pP5xL4i1hiF5iq9,Pziqt9a8Ib9ME6vlcr0FKF" />
-          <Link Id="GSCeZOfOQUwQDqJd3oC0m8" Ids="T3ivXW0uNPgPT0Mnfc78lO,K99iyAzOy63O6UAllvXUaR" />
+          <Link Id="GSCeZOfOQUwQDqJd3oC0m8" Ids="T3ivXW0uNPgPT0Mnfc78lO,EFMB2re1B7dMnXEEQVlhVW" />
           <Link Id="TguRZZiSZLJO0XFZOWIqme" Ids="Ei3Q68iM64TOYkugFfAqUZ,E3sRKAUSlhKNynrjTwoHd7" />
           <Link Id="Sz3gkivGpt8PeiRnuu8G69" Ids="QtD2Sv1IeVRPm9gip1mQIo,Q3IJfHVxWkWMUenPRzC3n2" />
           <Link Id="VID33DSLAK6ONx1xgRSsEP" Ids="AvVBN3F57YkO5mUwbRwM4C,KFEi7wLVMFTN54fkAihiJE" />
@@ -1385,6 +1403,10 @@
           <Link Id="Oqkb9jbVVviPBWr0zQv0eM" Ids="HswmmmznHezLV9C8seokuk,MnGKaNUvflpOXnWgi8X8N9" />
           <Link Id="BdPNH71ROzQNdoKuP6CdwC" Ids="M4Qb4HrTKWPMRS3yo04Ogo,E8oZvD1YW3tQSxs0ByAFyB" />
           <Link Id="TDE4ByE6ZOSMjazlg2YCVl" Ids="N2GqlKmebJ9MFkG4OlAGhq,MpVdVNsXijaMIxPqMC2bIb" />
+          <Link Id="EXaiMx3yKmpONTkMQi3gxJ" Ids="LPsSdCFtUU4LhqzargvKOS,K99iyAzOy63O6UAllvXUaR" />
+          <Link Id="MZC4OKly8JmO9SHXdulqER" Ids="VejAHAYurX0O3VEH2976sY,MQcX6D2tEGpNVbxv5Jo9ad" />
+          <Link Id="Lm95KCgSh36PY4250j22m6" Ids="Ak1nrU55RGMM6eHJL0Oa2Y,SAaWvjmS4JELh6dNWsRq5v" />
+          <Link Id="IPvyZfxy8i2PbRfu563Gv3" Ids="NBEQ9c5pP5xL4i1hiF5iq9,L3aun5eOYoiN3YIT56ARWD" />
         </Patch>
       </Node>
       <!--
