@@ -1175,7 +1175,6 @@
             </Node>
             <ControlPoint Id="Tcaz8l0M0b0NXLTw4DCHK4" Bounds="133,1872" />
             <ControlPoint Id="MoYqIRZqhK3MvKn1z6uEF2" Bounds="182,1872" />
-            <Pad Id="DFsORI8ddb2Oz7eINCtwsL" Comment="" Bounds="821,1269,159,15" ShowValueBox="true" />
             <Node Bounds="69,1978,127,80" Id="PEzMVX8C27TLWJIAosz1pa">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -1217,11 +1216,6 @@
               <Pin Id="DZ3X6Nu8pVsNKwHXFnwqlU" Name="Result" Kind="OutputPin" />
               <Pin Id="RbPpCPmKlrhMV9XAaN3kk7" Name="Not Assigned" Kind="OutputPin" />
             </Node>
-            <Pad Id="IprP1VnCoEtN0ZFZkeX89g" Comment="" Bounds="821,1098,159,15" ShowValueBox="true" isIOBox="true" Value="FrameTypePosition">
-              <p:TypeAnnotation LastCategoryFullName="LsWebsocketClient" LastDependency="VL.BlueIOT.dll">
-                <Choice Kind="TypeFlag" Name="LsFrameType" />
-              </p:TypeAnnotation>
-            </Pad>
             <Pad Id="N3HOnd33MVoMx2DnvmgDMO" Comment="" Bounds="821,1435,159,15" ShowValueBox="true" isIOBox="true" Value="FrameTypeBattery">
               <p:TypeAnnotation LastCategoryFullName="LsWebsocketClient" LastDependency="VL.BlueIOT.dll">
                 <Choice Kind="TypeFlag" Name="LsFrameType" />
@@ -1532,6 +1526,16 @@
                 <Choice Kind="TypeFlag" Name="LsFrameType" />
               </p:TypeAnnotation>
             </Pad>
+            <Pad Id="IFc3bJsjTuQOlxsrI6dd41" Comment="" Bounds="802,1102,159,15" ShowValueBox="true" isIOBox="true" Value="FrameTypePosition">
+              <p:TypeAnnotation LastCategoryFullName="Devices.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                <Choice Kind="TypeFlag" Name="LsFrameType" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="VStBIxjfoQwOcSrSFRUAMB" Comment="" Bounds="799,1273,159,15" ShowValueBox="true" isIOBox="true" Value="FrameTypeExternData">
+              <p:TypeAnnotation LastCategoryFullName="Devices.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                <Choice Kind="TypeFlag" Name="LsFrameType" />
+              </p:TypeAnnotation>
+            </Pad>
           </Canvas>
           <ProcessDefinition Id="HTsxyg7ID5CQJ431ZRZz7g" HasStateOut="true">
             <Fragment Id="PlnnHqV1buXPbI8UQzjlFc" Patch="JfByw3ypGFIL7bvg01Aswm" Enabled="true" />
@@ -1635,8 +1639,6 @@
           <Link Id="Q1tRHd9B8k9LPTW6fOptqK" Ids="DZ3X6Nu8pVsNKwHXFnwqlU,AQ9K7ogVPQaNgktgEH85sZ" />
           <Link Id="SNat8kUCLMEQaTWkBYR7oQ" Ids="TqE8AeCWnYwO2cRuDpO3q8,EasU1eaN5sHPSWIW3PyRwb" />
           <Link Id="Nr9Ur4SzmF5MYEzBrQEQCt" Ids="CrcYyOOeQieLM4ReA9C10S,Qyd2eHklcdSO7VxTJNXd94" />
-          <Link Id="UW15TQKtTrfPChB12qAMGe" Ids="IprP1VnCoEtN0ZFZkeX89g,Pc0D8u644sfNUpM0dGUXmq" />
-          <Link Id="HbRvu9u2tYxOBX2HvljA7o" Ids="DFsORI8ddb2Oz7eINCtwsL,R9Uf2xib7uKPRn9c8Ryi4B" />
           <Link Id="Is2u9hfDMVQNgmWz9hPOL0" Ids="N3HOnd33MVoMx2DnvmgDMO,McTmvS39vOgNZgc5NlSVM2" />
           <Link Id="HW2v4mAHt6AOVxKvPKmYq9" Ids="Uze80RJcpptMmegzS0am1P,M8f4Gnn10hYQESMJqh4G0I" IsHidden="true" />
           <Link Id="JPckEpEs3wHLFpc4IcJ10U" Ids="MQRzPL0zo2FNbERBuBqAYW,TR8VL6Ph8KLPyYgNDCKhcR" IsHidden="true" />
@@ -1674,6 +1676,8 @@
           <Link Id="COJGCFDejjlP0vBa174OXL" Ids="CGDRfGwNSDtOhAcmIijGKY,N4N4xoc09lDMQFbAuwCMxr" />
           <Link Id="G3dD1It3Ut2NXtXptcYNJp" Ids="N4N4xoc09lDMQFbAuwCMxr,U8pRVwNTrPANzon2Tv6rCk" />
           <Link Id="JwG0xxiUEnpOE6G0EKVy9C" Ids="HBajiVT4zbkP2xsOOZmAaM,Cxk634RdB3PQO4fdz34xwN" />
+          <Link Id="AlqJoLC6kV3LMs1YvWFRHE" Ids="IFc3bJsjTuQOlxsrI6dd41,Pc0D8u644sfNUpM0dGUXmq" />
+          <Link Id="DgpH5f6wNt0L71ijTkueyE" Ids="VStBIxjfoQwOcSrSFRUAMB,R9Uf2xib7uKPRn9c8Ryi4B" />
         </Patch>
       </Node>
       <!--
@@ -1957,6 +1961,24 @@
           <Patch Id="ODB2CecoX8cOYqwwcA1iRZ">
             <Canvas Id="Gh6E3TVCu5lN5UpCX3cg2u" BordersChecked="false" CanvasType="Group" />
             <ProcessDefinition Id="IqaTD4lTgHdLH0yFp4ymIw" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ LsFrameType (Internal) ************************
+
+-->
+        <Node Name="LsFrameType (Internal)" Bounds="404,400" Id="HCEJ1LUjPOYO4rfG2D3XpY">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="LsWebsocketClient" LastDependency="VL.BlueIOT.dll">
+            <Choice Kind="TypeFlag" Name="LsFrameType" />
+          </p:TypeAnnotation>
+          <Patch Id="QITPDvLHSE1MGDjlfWm618">
+            <Canvas Id="GN34P7hfzc6N13SNHFM3ly" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="KzGUYuXiDnjPiehnEMd6Zd" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
