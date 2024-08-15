@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="EpNhJx3oilAOXp6nCqrw8k" LanguageVersion="2024.6.5" Version="0.128">
-  <NugetDependency Id="DB0ZwREP8dmNR0m89D4SrS" Location="VL.CoreLib" Version="2024.6.5" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="EpNhJx3oilAOXp6nCqrw8k" LanguageVersion="2024.6.6" Version="0.128">
+  <NugetDependency Id="DB0ZwREP8dmNR0m89D4SrS" Location="VL.CoreLib" Version="2024.6.6" />
   <Patch Id="KPCaPrMgaLbMYPRWv86mpR">
     <Canvas Id="GpJWlm3vs6VP558X2PjvXH" DefaultCategory="Devices.BlueIOT" CanvasType="FullCategory">
       <!--
@@ -15,13 +15,13 @@
         </p:NodeReference>
         <Patch Id="HZYOb6QhPjhLbErsDrGoJs">
           <Canvas Id="Sk1IDiKVUrOOIuFroJj05W" CanvasType="Group">
-            <ControlPoint Id="Oq0XdUdIwbpQGaxruRvSAd" Bounds="162,255" />
+            <ControlPoint Id="Oq0XdUdIwbpQGaxruRvSAd" Bounds="162,236" />
             <ControlPoint Id="QVUYVuYIrHnOfmV21OewXU" Bounds="275,255" />
             <ControlPoint Id="NAw6rv818mtL2Nuvoza83v" Bounds="388,255" />
             <ControlPoint Id="JV0oBNiwAEJLL7iDXEq36e" Bounds="501,255" />
             <ControlPoint Id="CmpD8cJtOggL374Y7Fp3S0" Bounds="614,255" />
             <ControlPoint Id="HXdmNNeRvCTN7wEHxrfoq1" Bounds="727,255" />
-            <Node Bounds="69,335,690,1667" Id="VX18BgBXo2AM7DGVtvC05T">
+            <Node Bounds="49,335,711,1667" Id="VX18BgBXo2AM7DGVtvC05T">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -30,7 +30,6 @@
               <Pin Id="J1lXvEfNn3PPeT0TNYoYbl" Name="Force" Kind="InputPin" />
               <Pin Id="HRoN53Mp9pNQbm4TSQiW0t" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="True" />
               <Pin Id="VejAHAYurX0O3VEH2976sY" Name="Has Changed" Kind="OutputPin" />
-              <ControlPoint Id="PViMqBmQiGPMALmHqmvACb" Bounds="202,1996" Alignment="Bottom" />
               <ControlPoint Id="HEcITgwcybVQHPkaOTxDpz" Bounds="162,341" Alignment="Top" />
               <ControlPoint Id="P8qRxTutNqXLLRiv9m7Tre" Bounds="275,341" Alignment="Top" />
               <ControlPoint Id="PK0xRvNRbbqOVwWFrkMRK1" Bounds="388,341" Alignment="Top" />
@@ -100,252 +99,6 @@
                   <Pin Id="Mb7r5rTdmEPNwyarL9gP2P" Name="Value" Kind="InputPin" />
                   <Pin Id="Iv9HVKR0PEgPWygfeaAmfo" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="81,862,93,26" Id="JpvBDyn1RZxNUUsedWnLEb">
-                  <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="AssemblyCategory" Name="LsWebsocketInterface" NeedsToBeDirectParent="true" />
-                    <Choice Kind="OperationCallFlag" Name="Create" />
-                  </p:NodeReference>
-                  <Pin Id="MpVdVNsXijaMIxPqMC2bIb" Name="Ls Websocket Params" Kind="InputPin" />
-                  <Pin Id="IkwkAOczcKCLiUY1vAegtQ" Name="Output" Kind="StateOutputPin" />
-                </Node>
-                <Node Bounds="81,918,115,26" Id="BJqwRA8Ijc0OWN50Gg2tA7">
-                  <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="WebsocketSdkVersion" />
-                  </p:NodeReference>
-                  <Pin Id="UNTVQ7MxvJFQJqNs0RXsDs" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="IbNU8LYkuSwLVNRtFYNZN3" Name="Output" Kind="StateOutputPin" />
-                  <Pin Id="LgVWLPDrdAeQR9HlyBtPLN" Name="Result" Kind="OutputPin" />
-                </Node>
-                <Node Bounds="81,974,93,26" Id="JaNJBiwou69MzGgO9LZOAT">
-                  <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="MessageEvent2" />
-                  </p:NodeReference>
-                  <Pin Id="PTAbY2hy56WN0ZjNadCWfJ" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="KVVYMVMxqtcPXsRXJOFAxj" Name="State Output" Kind="OutputPin" />
-                  <Pin Id="Vv28O31oA0DPT4eNdfc6xu" Name="Result" Kind="OutputPin" />
-                </Node>
-                <Node Bounds="81,1030,123,26" Id="EU71uWJBNV7OU7yS7JB7Kp">
-                  <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="WebsocketStatusEvent2" />
-                  </p:NodeReference>
-                  <Pin Id="TgaPpuFEnSkPXxEwLTtrLK" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="NoYoY4fNOCSPYe19vI8aOS" Name="State Output" Kind="OutputPin" />
-                  <Pin Id="NY5YerdAlwgN1G0epuAm0V" Name="Result" Kind="OutputPin" />
-                </Node>
-                <Node Bounds="480,1036,267,901" Id="B0MvdtsS1EoNWBwj2gGcSp">
-                  <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
-                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
-                    <Choice Kind="ProcessAppFlag" Name="ForEach" />
-                  </p:NodeReference>
-                  <Pin Id="AaqlRvWIOlcPEaxxmoghwN" Name="Node Context" Kind="InputPin" IsHidden="true" />
-                  <Pin Id="Rr33FwudOy7O4cBXSGXlyF" Name="Messages" Kind="InputPin" />
-                  <Pin Id="TcOqHGSDVpBL4eyhTlh9bp" Name="Reset" Kind="InputPin" />
-                  <Pin Id="K85WOhOy9G2OSFENYC24ul" Name="Result" Kind="OutputPin" />
-                  <Patch Id="N4fmqefoypaOWet1QhZ7jj" ManuallySortedPins="true">
-                    <Patch Id="JLr6jzyC9o2NOrjZhyBB9b" Name="Create" ManuallySortedPins="true" />
-                    <Patch Id="RnMZ1JCggMjQS8Wo4QMOQq" Name="Update" ManuallySortedPins="true">
-                      <Pin Id="CwpCb2DQSNiQXOJiZikzgr" Name="Input 1" Kind="InputPin" />
-                      <Pin Id="IKFO1o8OdNYLEfxfLw8iva" Name="Output" Kind="OutputPin" />
-                    </Patch>
-                    <ControlPoint Id="AGmfLOgJafrQFpPN24YRu6" Bounds="498,1044" />
-                    <ControlPoint Id="MaW0nD9e4AoQSpxs8dFOE3" Bounds="491,1916" />
-                    <Node Bounds="494,1063,62,26" Id="LUrBR5cXbRTNqWmWK4O5uv">
-                      <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <FullNameCategoryReference ID="Reactive.EventPattern" />
-                        <Choice Kind="OperationCallFlag" Name="EventArgs" />
-                      </p:NodeReference>
-                      <Pin Id="PDSI3Zj3yJ1Ndl5qirkCvj" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="GHfFWAfyz6XOjbIxIJ0CCV" Name="Event Args" Kind="OutputPin" />
-                    </Node>
-                    <Node Bounds="492,1106,80,26" Id="RphQsQzsXAdNV704G4IkV9">
-                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface.LSMessageHandle" LastDependency="VL.BlueIOT.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <Choice Kind="OperationCallFlag" Name="FrameType" />
-                      </p:NodeReference>
-                      <Pin Id="MmNAUcIxml8NpXFBtXfLZG" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="VVnxlhCx0ZtOzNs8PH2j0E" Name="Output" Kind="StateOutputPin" />
-                      <Pin Id="GZTgh3kfhVMOQKkPXyw9c2" Name="Frame Type" Kind="OutputPin" />
-                    </Node>
-                    <Node Bounds="590,1148,25,19" Id="Rd5zgvSAYRJMNTZMRDvMV1">
-                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="=" />
-                      </p:NodeReference>
-                      <Pin Id="CI9SRwc2sJfQMi6GAV7Bq0" Name="Input" Kind="InputPin" />
-                      <Pin Id="Pc0D8u644sfNUpM0dGUXmq" Name="Input 2" Kind="InputPin" />
-                      <Pin Id="PCmpPlGXAlRQVbQesg5AZH" Name="Result" Kind="OutputPin" />
-                    </Node>
-                    <Node Bounds="588,1189,129,80" Id="F942r2KIGLsNEvRzIpcucq">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                        <CategoryReference Kind="Category" Name="Primitive" />
-                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
-                      </p:NodeReference>
-                      <Pin Id="J1KSLj8KWpxLhkSNqLYnDF" Name="Condition" Kind="InputPin" />
-                      <ControlPoint Id="RCjrkV4xdtZOW3pnNaBltF" Bounds="700,1195" Alignment="Top" />
-                      <ControlPoint Id="Kbtm0zzNeBwLvYwS7YoOfo" Bounds="700,1263" Alignment="Bottom" />
-                      <ControlPoint Id="VcMlwKi4YNdNt5AVA5heSp" Bounds="603,1195" Alignment="Top" />
-                      <ControlPoint Id="VBgveldA9lpMLujDuIoeul" Bounds="603,1263" Alignment="Bottom" />
-                      <Patch Id="AA1OjD38vGrPOJlo51sS4s" ManuallySortedPins="true">
-                        <Patch Id="J2azQKQTA0LLtx9aiP9Cmj" Name="Create" ManuallySortedPins="true" />
-                        <Patch Id="Fg2hPLhxI0uNAD1vUn1eRb" Name="Then" ManuallySortedPins="true" />
-                        <Node Bounds="600,1221,102,19" Id="BM0Z1IveBW3MeKeaJEEOJo">
-                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
-                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <Choice Kind="OperationCallFlag" Name="FrameTypePosition" />
-                          </p:NodeReference>
-                          <Pin Id="NMzq9GaSemRPLbSxikU1gr" Name="Input" Kind="InputPin" />
-                          <Pin Id="AbUwunWf9V4PehXvr5JwBw" Name="Default" Kind="InputPin" />
-                          <Pin Id="TRumYcRjVvaLpir5HbYd4k" Name="Tags" Kind="InputPin" />
-                        </Node>
-                      </Patch>
-                    </Node>
-                    <Node Bounds="583,1357,140,80" Id="CcSeAknXj3qPRGkc51C81q">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                        <CategoryReference Kind="Category" Name="Primitive" />
-                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
-                      </p:NodeReference>
-                      <Pin Id="OeFbXYPicC1NmmD5MklQ1r" Name="Condition" Kind="InputPin" />
-                      <ControlPoint Id="H97FuW8KyYCPjs9FErQO3u" Bounds="695,1363" Alignment="Top" />
-                      <ControlPoint Id="GDkLcOabCDBLaB7Uh1yBdB" Bounds="695,1431" Alignment="Bottom" />
-                      <ControlPoint Id="Lny9RHPeT6JLpJfxvcOH9H" Bounds="600,1363" Alignment="Top" />
-                      <ControlPoint Id="UGj4JT6rxJqPZD5A8EfUSD" Bounds="600,1431" Alignment="Bottom" />
-                      <Patch Id="BAh9k8Bj9y9LHzaOmxfwsI" ManuallySortedPins="true">
-                        <Patch Id="FO0JEyIgXZlNb34FKevkSl" Name="Create" ManuallySortedPins="true" />
-                        <Patch Id="Ktpfch5v9kjLyAczv1Zzj9" Name="Then" ManuallySortedPins="true" />
-                        <Node Bounds="595,1389,116,19" Id="UtCtfDVvddZMlGy4wNdRxj">
-                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
-                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <Choice Kind="OperationCallFlag" Name="FrameTypeExternData" />
-                          </p:NodeReference>
-                          <Pin Id="C3vD1qJxMfJO1VnqFSuPMH" Name="Input" Kind="InputPin" />
-                          <Pin Id="GZxpPNyYYxEM3FZixCnn8H" Name="Tags" Kind="InputPin" />
-                        </Node>
-                      </Patch>
-                    </Node>
-                    <Node Bounds="581,1306,25,19" Id="DB2R7cQg7XIOKKyxlMT8V5">
-                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="=" />
-                      </p:NodeReference>
-                      <Pin Id="LeVhnDyuQayQbmKMsWcayr" Name="Input" Kind="InputPin" />
-                      <Pin Id="R9Uf2xib7uKPRn9c8Ryi4B" Name="Input 2" Kind="InputPin" />
-                      <Pin Id="EzGFSSDabTnOZspNszJ1K1" Name="Result" Kind="OutputPin" />
-                    </Node>
-                    <Node Bounds="583,1522,140,80" Id="QS3WfIZKtrlL7e9fMWNfcI">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                        <CategoryReference Kind="Category" Name="Primitive" />
-                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
-                      </p:NodeReference>
-                      <Pin Id="P6pQuBF1JhcMgX7eti8Nee" Name="Condition" Kind="InputPin" />
-                      <ControlPoint Id="DrKgrThIA6QPPtRr5VEww8" Bounds="695,1528" Alignment="Top" />
-                      <ControlPoint Id="CGDRfGwNSDtOhAcmIijGKY" Bounds="695,1596" Alignment="Bottom" />
-                      <ControlPoint Id="J1Ca2AE3ojgPT5eLBapm3o" Bounds="600,1528" Alignment="Top" />
-                      <ControlPoint Id="HBajiVT4zbkP2xsOOZmAaM" Bounds="600,1596" Alignment="Bottom" />
-                      <Patch Id="AGCFZewJflXNF5NeKAMP6d" ManuallySortedPins="true">
-                        <Patch Id="UHthp17iXVXMuJFevojTrE" Name="Create" ManuallySortedPins="true" />
-                        <Patch Id="EHhd3SbTHZNPT8oZgmZdak" Name="Then" ManuallySortedPins="true" />
-                        <Node Bounds="595,1554,98,19" Id="IM2T62AKEmWOikK15yue9j">
-                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
-                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <Choice Kind="OperationCallFlag" Name="FrameTypeBattery" />
-                          </p:NodeReference>
-                          <Pin Id="DpfAU8Rs5h7NmKN0hcalbW" Name="Input" Kind="InputPin" />
-                          <Pin Id="O39NiGn6bEJP9RdFAqgRzX" Name="Tags" Kind="InputPin" />
-                        </Node>
-                      </Patch>
-                    </Node>
-                    <Node Bounds="581,1471,25,19" Id="PHz3CA9w7IUObjhMosbV7a">
-                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="=" />
-                      </p:NodeReference>
-                      <Pin Id="CCweQXTcbBtLJm7ocjGEeI" Name="Input" Kind="InputPin" />
-                      <Pin Id="McTmvS39vOgNZgc5NlSVM2" Name="Input 2" Kind="InputPin" />
-                      <Pin Id="TDAsKvLIWgcLqxo0u8jM3Q" Name="Result" Kind="OutputPin" />
-                    </Node>
-                    <Node Bounds="584,1837,151,80" Id="KlbNXHUeDbFQSIEHQhCVBD">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                        <CategoryReference Kind="Category" Name="Primitive" />
-                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
-                      </p:NodeReference>
-                      <Pin Id="CmLZZQEHXlyPZjkHH3Qc8l" Name="Condition" Kind="InputPin" />
-                      <ControlPoint Id="N4N4xoc09lDMQFbAuwCMxr" Bounds="702,1843" Alignment="Top" />
-                      <ControlPoint Id="S8YwqVX505dLkLWEIeZoEM" Bounds="695,1911" Alignment="Bottom" />
-                      <ControlPoint Id="Cxk634RdB3PQO4fdz34xwN" Bounds="600,1843" Alignment="Top" />
-                      <ControlPoint Id="QofjImyWwN5Mcha4g4l2JU" Bounds="600,1911" Alignment="Bottom" />
-                      <Patch Id="CqK6Ls5ND9GOJdsHzWgMaX" ManuallySortedPins="true">
-                        <Patch Id="GCjA2Oeo8coQNeLtn5maUy" Name="Create" ManuallySortedPins="true" />
-                        <Patch Id="FE9njQHU3qtPfY8Gu4ve40" Name="Then" ManuallySortedPins="true" />
-                        <Node Bounds="596,1867,127,19" Id="IRYbsHLXzoyPWLj4i6rCIy">
-                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
-                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <Choice Kind="OperationCallFlag" Name="FrameTypeAreaStatistics" />
-                          </p:NodeReference>
-                          <Pin Id="B6rO0lNcdKYL48VPJCps6s" Name="Input" Kind="InputPin" />
-                          <Pin Id="U8pRVwNTrPANzon2Tv6rCk" Name="Tags" Kind="InputPin" />
-                        </Node>
-                      </Patch>
-                    </Node>
-                    <Node Bounds="581,1786,25,19" Id="M7CyZ39j0JwOQkJ88JJxp3">
-                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="=" />
-                      </p:NodeReference>
-                      <Pin Id="PM6B0AMwdtvN2hbKNFYWpo" Name="Input" Kind="InputPin" />
-                      <Pin Id="RJlMvK89mutNLZzWatFEE0" Name="Input 2" Kind="InputPin" />
-                      <Pin Id="DKSmCv6rgkgL8cO2GKjz6n" Name="Result" Kind="OutputPin" />
-                    </Node>
-                    <Node Bounds="581,1681,140,80" Id="CTitVmJ87TWPJBULudAm2w">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                        <CategoryReference Kind="Category" Name="Primitive" />
-                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
-                      </p:NodeReference>
-                      <Pin Id="FlyOwk5L54gLDOgVLMjTvi" Name="Condition" Kind="InputPin" />
-                      <ControlPoint Id="Oj73lCLMNZwOKakNj8IZsV" Bounds="693,1687" Alignment="Top" />
-                      <ControlPoint Id="O61zU0CyIOwQY4fMSM4sfZ" Bounds="693,1755" Alignment="Bottom" />
-                      <ControlPoint Id="KECtI6bDAWgNJvJZ3JrN08" Bounds="598,1687" Alignment="Top" />
-                      <ControlPoint Id="NPRw0GA1MnUNdb6i6gMcX6" Bounds="598,1755" Alignment="Bottom" />
-                      <Patch Id="OOTbrQjZuxEOComlLk1Fi2" ManuallySortedPins="true">
-                        <Patch Id="PKx8czJArONML6ppSUth5f" Name="Create" ManuallySortedPins="true" />
-                        <Patch Id="Lx9gU8GeVEHQJncrcybyMg" Name="Then" ManuallySortedPins="true" />
-                        <Node Bounds="593,1713,116,19" Id="Haaa3py2CdqOr9YTpO1xw1">
-                          <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
-                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                            <Choice Kind="OperationCallFlag" Name="FrameTypeCustomIot" />
-                          </p:NodeReference>
-                          <Pin Id="TmDkQVAzN7DNG2g3LJIeTx" Name="Input" Kind="InputPin" />
-                          <Pin Id="AU0QPA7uaUHOSVN8ZeHYjc" Name="Default" Kind="InputPin" />
-                          <Pin Id="RFt6xzVJ5nELFU6usdSPwL" Name="Tags" Kind="InputPin" />
-                        </Node>
-                      </Patch>
-                    </Node>
-                    <Node Bounds="579,1630,25,19" Id="CnOe71wiE6gLqba0QhoaBA">
-                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="=" />
-                      </p:NodeReference>
-                      <Pin Id="E2D37NrGUPvQXcktGJbALm" Name="Input" Kind="InputPin" />
-                      <Pin Id="SUHSBgtXdGHNurZSilBpJ3" Name="Input 2" Kind="InputPin" />
-                      <Pin Id="RNg4B1iIiiJP12yp5vp6bH" Name="Result" Kind="OutputPin" />
-                    </Node>
-                  </Patch>
-                </Node>
                 <Node Bounds="81,694,88,26" Id="SM8RhP15eFyOf232A7ITGh">
                   <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketParams" LastDependency="VL.BlueIOT.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -356,69 +109,359 @@
                   <Pin Id="CZDVmff0OCfNVWK3EE5Bbz" Name="Value" Kind="InputPin" DefaultValue="SubProtocolRealCtrlBoth" />
                   <Pin Id="M4Qb4HrTKWPMRS3yo04Ogo" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="307,1347,130,170" Id="BHTrx72HE8uP1iIyLWLBRs">
-                  <p:NodeReference LastCategoryFullName="Reactive.Observable" LastDependency="VL.CoreLib.vl">
-                    <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                    <CategoryReference Kind="4034920448" Name="Observable" NeedsToBeDirectParent="true" />
-                    <Choice Kind="OperationCallFlag" Name="Select" />
-                  </p:NodeReference>
-                  <Pin Id="BdbFtklZelMMbyRUgAbgSh" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="D0pWVzEt9v9O3iFccETTNn" Name="Output" Kind="StateOutputPin" />
-                  <Patch Id="DQJpsD8JRaiOdpRCdxEVKU" Name="Selector" ManuallySortedPins="true">
-                    <Pin Id="Uze80RJcpptMmegzS0am1P" Name="Input 1" Kind="InputPin" />
-                    <Pin Id="MQRzPL0zo2FNbERBuBqAYW" Name="Input 2" Kind="InputPin" />
-                    <Pin Id="TdY7yLmnhAAN6CP9n1Qlld" Name="Result" Kind="OutputPin" />
-                    <ControlPoint Id="M8f4Gnn10hYQESMJqh4G0I" Bounds="321,1355" />
-                    <ControlPoint Id="TR8VL6Ph8KLPyYgNDCKhcR" Bounds="381,1355" />
-                    <ControlPoint Id="AsgqntQz1MJP6Rg4izyEmZ" Bounds="323,1510" />
-                    <Node Bounds="319,1370,62,26" Id="RH7nAHqLSEhLKY1gwYYE80">
-                      <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <FullNameCategoryReference ID="Reactive.EventPattern" />
-                        <Choice Kind="OperationCallFlag" Name="EventArgs" />
-                      </p:NodeReference>
-                      <Pin Id="VhmK1JZSXDKNqPwVkUno5C" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="VeuRw9hyjmuLGqh0GgQ6wo" Name="Event Args" Kind="OutputPin" />
-                    </Node>
-                    <Node Bounds="319,1441,71,26" Id="GvytrmbCUYOPtyknKrAxlm">
-                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface.LSStatusHandle" LastDependency="VL.BlueIOT.dll">
-                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <FullNameCategoryReference ID="LsWebsocketClient.LsWebsocketInterface.LSStatusHandle" />
-                        <Choice Kind="OperationCallFlag" Name="Status" />
-                      </p:NodeReference>
-                      <Pin Id="Ou73TZtJsUcOV30raO1dSu" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="Ela9n4J1abwN4XkGxzw87M" Name="Output" Kind="StateOutputPin" />
-                      <Pin Id="Oj6CYqJmFEcLDtt1RAWot8" Name="Status" Kind="OutputPin" />
-                    </Node>
-                  </Patch>
-                </Node>
-                <Node Bounds="81,748,111,26" Id="PwzKNMwWg0gOCGl6fxKnDV">
-                  <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketParams" LastDependency="VL.BlueIOT.dll">
-                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="SetReconnectInterval" />
-                  </p:NodeReference>
-                  <Pin Id="E8oZvD1YW3tQSxs0ByAFyB" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="D3QbMYqgz3MLfm82AaE6t0" Name="Value" Kind="InputPin" DefaultValue="2" />
-                  <Pin Id="HswmmmznHezLV9C8seokuk" Name="Output" Kind="StateOutputPin" />
-                </Node>
-                <Node Bounds="81,804,88,26" Id="GmkJZpYpusTPDdXtSZYiRN">
+                <Node Bounds="81,759,88,26" Id="GmkJZpYpusTPDdXtSZYiRN">
                   <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketParams" LastDependency="VL.BlueIOT.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetBReconnect" />
                   </p:NodeReference>
                   <Pin Id="MnGKaNUvflpOXnWgi8X8N9" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="EJX4ozUuvM2P1nD5suE4gM" Name="Value" Kind="InputPin" DefaultValue="True" />
+                  <Pin Id="EJX4ozUuvM2P1nD5suE4gM" Name="Value" Kind="InputPin" DefaultValue="False" />
                   <Pin Id="N2GqlKmebJ9MFkG4OlAGhq" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Pad Id="LP35Q4Cvx7NNRx4jIMI8fV" Comment="" Bounds="191,725,35,15" ShowValueBox="true" isIOBox="true" Value="5">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-                    <Choice Kind="TypeFlag" Name="Integer32" />
-                  </p:TypeAnnotation>
-                </Pad>
                 <Pad Id="Qp7SK2Tq3XyNXs2SUJRZTv" Comment="" Bounds="184,678,140,15" ShowValueBox="true" isIOBox="true" Value="SubProtocolRealCtrlBoth">
                   <p:TypeAnnotation LastCategoryFullName="LsWebsocketClient" LastDependency="VL.BlueIOT.dll">
                     <Choice Kind="TypeFlag" Name="LsWebsocketSubProtocol" />
                   </p:TypeAnnotation>
+                </Pad>
+                <Slot Id="F3l0unrZVBrLzA9B3dBrcS" Name="IP">
+                  <p:TypeAnnotation p:Type="TypeReference">
+                    <Choice Kind="TypeFlag" Name="IPAddress" />
+                  </p:TypeAnnotation>
+                </Slot>
+                <Node Bounds="181,791,55,19" Id="F7JnQSpC2TdOn9a3J8GYza">
+                  <p:NodeReference LastCategoryFullName="IO.Net.IPAddress" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="IPAddress" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="TryParse" />
+                  </p:NodeReference>
+                  <Pin Id="LTCfpsgojoHOQPlW3YiZwf" Name="Input" Kind="InputPin" />
+                  <Pin Id="LcUUSzHY9ziOnVCRTmVc2t" Name="Success" Kind="OutputPin" />
+                  <Pin Id="TEcmYefunYZMFOAi3EtHZx" Name="Address" Kind="OutputPin" />
+                </Node>
+                <Pad Id="RcnKlIj6zHrP4cGaZonjXb" SlotId="F3l0unrZVBrLzA9B3dBrcS" Bounds="234,832" />
+                <Node Bounds="73,831,37,19" Id="RaSU4zD6eYCNq7nMZ7e6p4">
+                  <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="AND" />
+                  </p:NodeReference>
+                  <Pin Id="HR51XWs1DK4OTN5P5Tr72a" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="OW7nooimmRfNgb1hBEJEjW" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="TICb8CO1gBZPBCvIIqSSiC" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="72,863,676,1076" Id="SlohCYq2MI1LVpddW3Jt1k">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                    <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                  </p:NodeReference>
+                  <Pin Id="F33KijOESt5P6PQfKAErea" Name="Condition" Kind="InputPin" />
+                  <Patch Id="A6J60pKdvD7OiUkGn8uiR0" ManuallySortedPins="true">
+                    <Patch Id="I4rus3n7f6OLp1FaH3GD5n" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="H1F5tkyoZoYLVxcgYhQHfn" Name="Then" ManuallySortedPins="true" />
+                    <Node Bounds="85,886,93,26" Id="JpvBDyn1RZxNUUsedWnLEb">
+                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="LsWebsocketInterface" NeedsToBeDirectParent="true" />
+                        <Choice Kind="OperationCallFlag" Name="Create" />
+                      </p:NodeReference>
+                      <Pin Id="MpVdVNsXijaMIxPqMC2bIb" Name="Ls Websocket Params" Kind="InputPin" />
+                      <Pin Id="IkwkAOczcKCLiUY1vAegtQ" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="86,946,115,26" Id="BJqwRA8Ijc0OWN50Gg2tA7">
+                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="WebsocketSdkVersion" />
+                      </p:NodeReference>
+                      <Pin Id="UNTVQ7MxvJFQJqNs0RXsDs" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="IbNU8LYkuSwLVNRtFYNZN3" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="LgVWLPDrdAeQR9HlyBtPLN" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="86,1002,93,26" Id="JaNJBiwou69MzGgO9LZOAT">
+                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="MessageEvent2" />
+                      </p:NodeReference>
+                      <Pin Id="PTAbY2hy56WN0ZjNadCWfJ" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="KVVYMVMxqtcPXsRXJOFAxj" Name="State Output" Kind="OutputPin" />
+                      <Pin Id="Vv28O31oA0DPT4eNdfc6xu" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="86,1058,123,26" Id="EU71uWJBNV7OU7yS7JB7Kp">
+                      <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface" LastDependency="VL.BlueIOT.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="WebsocketStatusEvent2" />
+                      </p:NodeReference>
+                      <Pin Id="TgaPpuFEnSkPXxEwLTtrLK" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="NoYoY4fNOCSPYe19vI8aOS" Name="State Output" Kind="OutputPin" />
+                      <Pin Id="NY5YerdAlwgN1G0epuAm0V" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="469,1018,267,901" Id="B0MvdtsS1EoNWBwj2gGcSp">
+                      <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                        <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
+                        <Choice Kind="ProcessAppFlag" Name="ForEach" />
+                      </p:NodeReference>
+                      <Pin Id="AaqlRvWIOlcPEaxxmoghwN" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                      <Pin Id="Rr33FwudOy7O4cBXSGXlyF" Name="Messages" Kind="InputPin" />
+                      <Pin Id="TcOqHGSDVpBL4eyhTlh9bp" Name="Reset" Kind="InputPin" />
+                      <Pin Id="K85WOhOy9G2OSFENYC24ul" Name="Result" Kind="OutputPin" />
+                      <Patch Id="N4fmqefoypaOWet1QhZ7jj" ManuallySortedPins="true">
+                        <Patch Id="JLr6jzyC9o2NOrjZhyBB9b" Name="Create" ManuallySortedPins="true" />
+                        <Patch Id="RnMZ1JCggMjQS8Wo4QMOQq" Name="Update" ManuallySortedPins="true">
+                          <Pin Id="CwpCb2DQSNiQXOJiZikzgr" Name="Input 1" Kind="InputPin" />
+                          <Pin Id="IKFO1o8OdNYLEfxfLw8iva" Name="Output" Kind="OutputPin" />
+                        </Patch>
+                        <ControlPoint Id="AGmfLOgJafrQFpPN24YRu6" Bounds="487,1026" />
+                        <ControlPoint Id="MaW0nD9e4AoQSpxs8dFOE3" Bounds="480,1898" />
+                        <Node Bounds="483,1045,62,26" Id="LUrBR5cXbRTNqWmWK4O5uv">
+                          <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <FullNameCategoryReference ID="Reactive.EventPattern" />
+                            <Choice Kind="OperationCallFlag" Name="EventArgs" />
+                          </p:NodeReference>
+                          <Pin Id="PDSI3Zj3yJ1Ndl5qirkCvj" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="GHfFWAfyz6XOjbIxIJ0CCV" Name="Event Args" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="481,1088,80,26" Id="RphQsQzsXAdNV704G4IkV9">
+                          <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface.LSMessageHandle" LastDependency="VL.BlueIOT.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="FrameType" />
+                          </p:NodeReference>
+                          <Pin Id="MmNAUcIxml8NpXFBtXfLZG" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="VVnxlhCx0ZtOzNs8PH2j0E" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="GZTgh3kfhVMOQKkPXyw9c2" Name="Frame Type" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="579,1130,25,19" Id="Rd5zgvSAYRJMNTZMRDvMV1">
+                          <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
+                            <Choice Kind="OperationCallFlag" Name="=" />
+                          </p:NodeReference>
+                          <Pin Id="CI9SRwc2sJfQMi6GAV7Bq0" Name="Input" Kind="InputPin" />
+                          <Pin Id="Pc0D8u644sfNUpM0dGUXmq" Name="Input 2" Kind="InputPin" />
+                          <Pin Id="PCmpPlGXAlRQVbQesg5AZH" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="577,1171,129,80" Id="F942r2KIGLsNEvRzIpcucq">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                            <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                            <CategoryReference Kind="Category" Name="Primitive" />
+                            <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                          </p:NodeReference>
+                          <Pin Id="J1KSLj8KWpxLhkSNqLYnDF" Name="Condition" Kind="InputPin" />
+                          <ControlPoint Id="RCjrkV4xdtZOW3pnNaBltF" Bounds="689,1177" Alignment="Top" />
+                          <ControlPoint Id="Kbtm0zzNeBwLvYwS7YoOfo" Bounds="689,1245" Alignment="Bottom" />
+                          <ControlPoint Id="VcMlwKi4YNdNt5AVA5heSp" Bounds="592,1177" Alignment="Top" />
+                          <ControlPoint Id="VBgveldA9lpMLujDuIoeul" Bounds="592,1245" Alignment="Bottom" />
+                          <Patch Id="AA1OjD38vGrPOJlo51sS4s" ManuallySortedPins="true">
+                            <Patch Id="J2azQKQTA0LLtx9aiP9Cmj" Name="Create" ManuallySortedPins="true" />
+                            <Patch Id="Fg2hPLhxI0uNAD1vUn1eRb" Name="Then" ManuallySortedPins="true" />
+                            <Node Bounds="589,1203,102,19" Id="BM0Z1IveBW3MeKeaJEEOJo">
+                              <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                <Choice Kind="OperationCallFlag" Name="FrameTypePosition" />
+                              </p:NodeReference>
+                              <Pin Id="NMzq9GaSemRPLbSxikU1gr" Name="Input" Kind="InputPin" />
+                              <Pin Id="AbUwunWf9V4PehXvr5JwBw" Name="Default" Kind="InputPin" />
+                              <Pin Id="TRumYcRjVvaLpir5HbYd4k" Name="Tags" Kind="InputPin" />
+                            </Node>
+                          </Patch>
+                        </Node>
+                        <Node Bounds="572,1339,140,80" Id="CcSeAknXj3qPRGkc51C81q">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                            <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                            <CategoryReference Kind="Category" Name="Primitive" />
+                            <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                          </p:NodeReference>
+                          <Pin Id="OeFbXYPicC1NmmD5MklQ1r" Name="Condition" Kind="InputPin" />
+                          <ControlPoint Id="H97FuW8KyYCPjs9FErQO3u" Bounds="684,1345" Alignment="Top" />
+                          <ControlPoint Id="GDkLcOabCDBLaB7Uh1yBdB" Bounds="684,1413" Alignment="Bottom" />
+                          <ControlPoint Id="Lny9RHPeT6JLpJfxvcOH9H" Bounds="589,1345" Alignment="Top" />
+                          <ControlPoint Id="UGj4JT6rxJqPZD5A8EfUSD" Bounds="589,1413" Alignment="Bottom" />
+                          <Patch Id="BAh9k8Bj9y9LHzaOmxfwsI" ManuallySortedPins="true">
+                            <Patch Id="FO0JEyIgXZlNb34FKevkSl" Name="Create" ManuallySortedPins="true" />
+                            <Patch Id="Ktpfch5v9kjLyAczv1Zzj9" Name="Then" ManuallySortedPins="true" />
+                            <Node Bounds="584,1371,116,19" Id="UtCtfDVvddZMlGy4wNdRxj">
+                              <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                <Choice Kind="OperationCallFlag" Name="FrameTypeExternData" />
+                              </p:NodeReference>
+                              <Pin Id="C3vD1qJxMfJO1VnqFSuPMH" Name="Input" Kind="InputPin" />
+                              <Pin Id="GZxpPNyYYxEM3FZixCnn8H" Name="Tags" Kind="InputPin" />
+                            </Node>
+                          </Patch>
+                        </Node>
+                        <Node Bounds="570,1288,25,19" Id="DB2R7cQg7XIOKKyxlMT8V5">
+                          <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
+                            <Choice Kind="OperationCallFlag" Name="=" />
+                          </p:NodeReference>
+                          <Pin Id="LeVhnDyuQayQbmKMsWcayr" Name="Input" Kind="InputPin" />
+                          <Pin Id="R9Uf2xib7uKPRn9c8Ryi4B" Name="Input 2" Kind="InputPin" />
+                          <Pin Id="EzGFSSDabTnOZspNszJ1K1" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="572,1504,129,80" Id="QS3WfIZKtrlL7e9fMWNfcI">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                            <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                            <CategoryReference Kind="Category" Name="Primitive" />
+                            <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                          </p:NodeReference>
+                          <Pin Id="P6pQuBF1JhcMgX7eti8Nee" Name="Condition" Kind="InputPin" />
+                          <ControlPoint Id="DrKgrThIA6QPPtRr5VEww8" Bounds="684,1510" Alignment="Top" />
+                          <ControlPoint Id="CGDRfGwNSDtOhAcmIijGKY" Bounds="684,1578" Alignment="Bottom" />
+                          <ControlPoint Id="J1Ca2AE3ojgPT5eLBapm3o" Bounds="589,1510" Alignment="Top" />
+                          <ControlPoint Id="HBajiVT4zbkP2xsOOZmAaM" Bounds="589,1578" Alignment="Bottom" />
+                          <Patch Id="AGCFZewJflXNF5NeKAMP6d" ManuallySortedPins="true">
+                            <Patch Id="UHthp17iXVXMuJFevojTrE" Name="Create" ManuallySortedPins="true" />
+                            <Patch Id="EHhd3SbTHZNPT8oZgmZdak" Name="Then" ManuallySortedPins="true" />
+                            <Node Bounds="584,1536,98,19" Id="IM2T62AKEmWOikK15yue9j">
+                              <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                <Choice Kind="OperationCallFlag" Name="FrameTypeBattery" />
+                              </p:NodeReference>
+                              <Pin Id="DpfAU8Rs5h7NmKN0hcalbW" Name="Input" Kind="InputPin" />
+                              <Pin Id="O39NiGn6bEJP9RdFAqgRzX" Name="Tags" Kind="InputPin" />
+                            </Node>
+                          </Patch>
+                        </Node>
+                        <Node Bounds="570,1453,25,19" Id="PHz3CA9w7IUObjhMosbV7a">
+                          <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
+                            <Choice Kind="OperationCallFlag" Name="=" />
+                          </p:NodeReference>
+                          <Pin Id="CCweQXTcbBtLJm7ocjGEeI" Name="Input" Kind="InputPin" />
+                          <Pin Id="McTmvS39vOgNZgc5NlSVM2" Name="Input 2" Kind="InputPin" />
+                          <Pin Id="TDAsKvLIWgcLqxo0u8jM3Q" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="573,1819,151,80" Id="KlbNXHUeDbFQSIEHQhCVBD">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                            <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                            <CategoryReference Kind="Category" Name="Primitive" />
+                            <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                          </p:NodeReference>
+                          <Pin Id="CmLZZQEHXlyPZjkHH3Qc8l" Name="Condition" Kind="InputPin" />
+                          <ControlPoint Id="N4N4xoc09lDMQFbAuwCMxr" Bounds="691,1825" Alignment="Top" />
+                          <ControlPoint Id="S8YwqVX505dLkLWEIeZoEM" Bounds="684,1893" Alignment="Bottom" />
+                          <ControlPoint Id="Cxk634RdB3PQO4fdz34xwN" Bounds="589,1825" Alignment="Top" />
+                          <ControlPoint Id="QofjImyWwN5Mcha4g4l2JU" Bounds="589,1893" Alignment="Bottom" />
+                          <Patch Id="CqK6Ls5ND9GOJdsHzWgMaX" ManuallySortedPins="true">
+                            <Patch Id="GCjA2Oeo8coQNeLtn5maUy" Name="Create" ManuallySortedPins="true" />
+                            <Patch Id="FE9njQHU3qtPfY8Gu4ve40" Name="Then" ManuallySortedPins="true" />
+                            <Node Bounds="585,1849,127,19" Id="IRYbsHLXzoyPWLj4i6rCIy">
+                              <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                <Choice Kind="OperationCallFlag" Name="FrameTypeAreaStatistics" />
+                              </p:NodeReference>
+                              <Pin Id="B6rO0lNcdKYL48VPJCps6s" Name="Input" Kind="InputPin" />
+                              <Pin Id="U8pRVwNTrPANzon2Tv6rCk" Name="Tags" Kind="InputPin" />
+                            </Node>
+                          </Patch>
+                        </Node>
+                        <Node Bounds="570,1768,25,19" Id="M7CyZ39j0JwOQkJ88JJxp3">
+                          <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
+                            <Choice Kind="OperationCallFlag" Name="=" />
+                          </p:NodeReference>
+                          <Pin Id="PM6B0AMwdtvN2hbKNFYWpo" Name="Input" Kind="InputPin" />
+                          <Pin Id="RJlMvK89mutNLZzWatFEE0" Name="Input 2" Kind="InputPin" />
+                          <Pin Id="DKSmCv6rgkgL8cO2GKjz6n" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="570,1663,140,80" Id="CTitVmJ87TWPJBULudAm2w">
+                          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                            <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                            <CategoryReference Kind="Category" Name="Primitive" />
+                            <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                          </p:NodeReference>
+                          <Pin Id="FlyOwk5L54gLDOgVLMjTvi" Name="Condition" Kind="InputPin" />
+                          <ControlPoint Id="Oj73lCLMNZwOKakNj8IZsV" Bounds="682,1669" Alignment="Top" />
+                          <ControlPoint Id="O61zU0CyIOwQY4fMSM4sfZ" Bounds="682,1737" Alignment="Bottom" />
+                          <ControlPoint Id="KECtI6bDAWgNJvJZ3JrN08" Bounds="587,1669" Alignment="Top" />
+                          <ControlPoint Id="NPRw0GA1MnUNdb6i6gMcX6" Bounds="587,1737" Alignment="Bottom" />
+                          <Patch Id="OOTbrQjZuxEOComlLk1Fi2" ManuallySortedPins="true">
+                            <Patch Id="PKx8czJArONML6ppSUth5f" Name="Create" ManuallySortedPins="true" />
+                            <Patch Id="Lx9gU8GeVEHQJncrcybyMg" Name="Then" ManuallySortedPins="true" />
+                            <Node Bounds="582,1695,116,19" Id="Haaa3py2CdqOr9YTpO1xw1">
+                              <p:NodeReference LastCategoryFullName="Devices.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
+                                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                <Choice Kind="OperationCallFlag" Name="FrameTypeCustomIot" />
+                              </p:NodeReference>
+                              <Pin Id="TmDkQVAzN7DNG2g3LJIeTx" Name="Input" Kind="InputPin" />
+                              <Pin Id="AU0QPA7uaUHOSVN8ZeHYjc" Name="Default" Kind="InputPin" />
+                              <Pin Id="RFt6xzVJ5nELFU6usdSPwL" Name="Tags" Kind="InputPin" />
+                            </Node>
+                          </Patch>
+                        </Node>
+                        <Node Bounds="568,1612,25,19" Id="CnOe71wiE6gLqba0QhoaBA">
+                          <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsFrameType" LastDependency="VL.BlueIOT.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="LsFrameType" NeedsToBeDirectParent="true" />
+                            <Choice Kind="OperationCallFlag" Name="=" />
+                          </p:NodeReference>
+                          <Pin Id="E2D37NrGUPvQXcktGJbALm" Name="Input" Kind="InputPin" />
+                          <Pin Id="SUHSBgtXdGHNurZSilBpJ3" Name="Input 2" Kind="InputPin" />
+                          <Pin Id="RNg4B1iIiiJP12yp5vp6bH" Name="Result" Kind="OutputPin" />
+                        </Node>
+                      </Patch>
+                    </Node>
+                    <Node Bounds="208,1137,130,170" Id="BHTrx72HE8uP1iIyLWLBRs">
+                      <p:NodeReference LastCategoryFullName="Reactive.Observable" LastDependency="VL.CoreLib.vl">
+                        <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                        <CategoryReference Kind="4034920448" Name="Observable" NeedsToBeDirectParent="true" />
+                        <Choice Kind="OperationCallFlag" Name="Select" />
+                      </p:NodeReference>
+                      <Pin Id="BdbFtklZelMMbyRUgAbgSh" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="D0pWVzEt9v9O3iFccETTNn" Name="Output" Kind="StateOutputPin" />
+                      <Patch Id="DQJpsD8JRaiOdpRCdxEVKU" Name="Selector" ManuallySortedPins="true">
+                        <Pin Id="Uze80RJcpptMmegzS0am1P" Name="Input 1" Kind="InputPin" />
+                        <Pin Id="MQRzPL0zo2FNbERBuBqAYW" Name="Input 2" Kind="InputPin" />
+                        <Pin Id="TdY7yLmnhAAN6CP9n1Qlld" Name="Result" Kind="OutputPin" />
+                        <ControlPoint Id="M8f4Gnn10hYQESMJqh4G0I" Bounds="222,1145" />
+                        <ControlPoint Id="TR8VL6Ph8KLPyYgNDCKhcR" Bounds="282,1145" />
+                        <ControlPoint Id="AsgqntQz1MJP6Rg4izyEmZ" Bounds="224,1300" />
+                        <Node Bounds="220,1160,62,26" Id="RH7nAHqLSEhLKY1gwYYE80">
+                          <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <FullNameCategoryReference ID="Reactive.EventPattern" />
+                            <Choice Kind="OperationCallFlag" Name="EventArgs" />
+                          </p:NodeReference>
+                          <Pin Id="VhmK1JZSXDKNqPwVkUno5C" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="VeuRw9hyjmuLGqh0GgQ6wo" Name="Event Args" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="220,1231,71,26" Id="GvytrmbCUYOPtyknKrAxlm">
+                          <p:NodeReference LastCategoryFullName="LsWebsocketClient.LsWebsocketInterface.LSStatusHandle" LastDependency="VL.BlueIOT.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <FullNameCategoryReference ID="LsWebsocketClient.LsWebsocketInterface.LSStatusHandle" />
+                            <Choice Kind="OperationCallFlag" Name="Status" />
+                          </p:NodeReference>
+                          <Pin Id="Ou73TZtJsUcOV30raO1dSu" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="Ela9n4J1abwN4XkGxzw87M" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="Oj6CYqJmFEcLDtt1RAWot8" Name="Status" Kind="OutputPin" />
+                        </Node>
+                      </Patch>
+                    </Node>
+                  </Patch>
+                  <ControlPoint Id="CcshbEJAZS3MHUaRfdxdQu" Bounds="86,1933" Alignment="Bottom" />
+                  <ControlPoint Id="D9PYmz4qU8eL3whtnbRHsX" Bounds="96,869" Alignment="Top" />
+                  <ControlPoint Id="EqEHJsi3CKnP6zEsHmUKdB" Bounds="292,1933" Alignment="Bottom" />
+                  <ControlPoint Id="VJdPKzbXC8gNjdodz06RMY" Bounds="292,869" Alignment="Top" />
+                </Node>
+                <Pad Id="EsuH8rakbduLEohz4KeTul" Comment="disable reconnect, see:" Bounds="186,735,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+                  </p:TypeAnnotation>
+                  <p:ValueBoxSettings>
+                    <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+                  </p:ValueBoxSettings>
+                </Pad>
+                <Pad Id="Dst2TINIl7TO8fsB6aqmAk" Bounds="224,752,140,19" ShowValueBox="true" isIOBox="true" Value="https://github.com/vvvv/VL.BlueIOT/issues/1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                  <p:ValueBoxSettings>
+                    <p:fontsize p:Type="Int32">9</p:fontsize>
+                    <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+                  </p:ValueBoxSettings>
                 </Pad>
               </Patch>
             </Node>
@@ -1261,7 +1304,7 @@
               <ControlPoint Id="BivGW2Vo6GWMTkIzP4NGTK" Bounds="509,2147" Alignment="Top" />
               <ControlPoint Id="O8wTNbpu2k2M4WSHCILYA0" Bounds="509,2441" Alignment="Bottom" />
             </Node>
-            <Node Bounds="483,2097,65,19" Id="ENEsikfliQYLg5XpyCmqIU">
+            <Node Bounds="492,2073,65,19" Id="ENEsikfliQYLg5XpyCmqIU">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="IsAssigned" />
@@ -1779,7 +1822,7 @@
               </Patch>
             </Node>
             <Pad Id="CakGPAkK8ClQJ8ovj97f3d" SlotId="MnHJeUiXDaCPkzbDtfcmKY" Bounds="758,2113" />
-            <ControlPoint Id="SXqkgIOs7DpMbKF0ATrijl" Bounds="-5,778" />
+            <ControlPoint Id="SXqkgIOs7DpMbKF0ATrijl" Bounds="-21,800" />
           </Canvas>
           <ProcessDefinition Id="HTsxyg7ID5CQJ431ZRZz7g" HasStateOut="true">
             <Fragment Id="PlnnHqV1buXPbI8UQzjlFc" Patch="JfByw3ypGFIL7bvg01Aswm" Enabled="true" />
@@ -1803,9 +1846,6 @@
           <Link Id="AGvvTejXXYiPCzT40OtMyt" Ids="QRkzKLmHSFAOESaWnryVjF,H7PUNcy6akQNzU2BG0wjzA" />
           <Link Id="IYgowX8CyPHLyQ8aOMTC5m" Ids="OLRENBaoRGSPIl4vCirwx1,GbCf1eNiRJWO2Zj57e41Ox" />
           <Link Id="P9LqLPEztEYMdPpBvHqowv" Ids="Iv9HVKR0PEgPWygfeaAmfo,FJUs4Ek9yCxOWAgXLks4NC" />
-          <Link Id="S0Q2ofIDbNrLEIPBBWDi5N" Ids="IkwkAOczcKCLiUY1vAegtQ,UNTVQ7MxvJFQJqNs0RXsDs" />
-          <Link Id="AMuzMUjCpCBQYv1rd3DK4O" Ids="IbNU8LYkuSwLVNRtFYNZN3,PTAbY2hy56WN0ZjNadCWfJ" />
-          <Link Id="BhboZjpp362OWcA9uNgwnA" Ids="LgVWLPDrdAeQR9HlyBtPLN,PViMqBmQiGPMALmHqmvACb" />
           <Link Id="L9evyWVrGIEPfmhp2XsFSn" Ids="HEcITgwcybVQHPkaOTxDpz,F91ypLQbakbPH4qId5pbCz" />
           <Link Id="E47mjgfgVZxPhy1mCIqV1p" Ids="Oq0XdUdIwbpQGaxruRvSAd,HEcITgwcybVQHPkaOTxDpz" />
           <Link Id="MdrOU256rjhOC42qgqh13n" Ids="QVUYVuYIrHnOfmV21OewXU,P8qRxTutNqXLLRiv9m7Tre" />
@@ -1831,42 +1871,12 @@
           <Link Id="NZ4LzI2q3MvPsCCWMYUGF9" Ids="PWskZP23ySWORKqPOs8sCk,Mb7r5rTdmEPNwyarL9gP2P" />
           <Link Id="EL4hokbiICRMzLrDTlRP4E" Ids="HXdmNNeRvCTN7wEHxrfoq1,PWskZP23ySWORKqPOs8sCk" />
           <Link Id="JR8Irv1eZXTPyDkM3U4FtI" Ids="PBZdckWzDBvK98XLBDXoSi,HRoN53Mp9pNQbm4TSQiW0t" />
-          <Link Id="MFSen1zD5AkOgFOUnX7KMc" Ids="Vv28O31oA0DPT4eNdfc6xu,Rr33FwudOy7O4cBXSGXlyF" />
-          <Link Id="MnstazsQTZJPxTxz0rgZ3S" Ids="KVVYMVMxqtcPXsRXJOFAxj,TgaPpuFEnSkPXxEwLTtrLK" />
           <Link Id="SbI66O9W2nfNOqe8GgHPe8" Ids="SU6T8SsyiBRNU0x8q0yGam,OSLPsQYHTFBMZskUxhfmPv" />
           <Link Id="F4f1dpd10oBLjInkmF3qOO" Ids="S44ewtFYsXUOcVanfJDTV8,GkMOUvLTOHkQACXuRScQvF" IsHidden="true" />
-          <Link Id="TqFxLqt6GNDPXtAHQD1Trq" Ids="CwpCb2DQSNiQXOJiZikzgr,AGmfLOgJafrQFpPN24YRu6" IsHidden="true" />
-          <Link Id="I10X4AFH2omNhDzmKyT2ej" Ids="MaW0nD9e4AoQSpxs8dFOE3,IKFO1o8OdNYLEfxfLw8iva" IsHidden="true" />
-          <Link Id="CkG0f2AZ5I1OSPLpPSH2Tc" Ids="AGmfLOgJafrQFpPN24YRu6,PDSI3Zj3yJ1Ndl5qirkCvj" />
-          <Link Id="Nguk0H3SX9pMVAGO41B8LH" Ids="GHfFWAfyz6XOjbIxIJ0CCV,MmNAUcIxml8NpXFBtXfLZG" />
-          <Link Id="Ca54sjstgPnOe305SjiU8l" Ids="GZTgh3kfhVMOQKkPXyw9c2,CI9SRwc2sJfQMi6GAV7Bq0" />
-          <Link Id="UMtwWtX3GvzQRzeQQ30lXN" Ids="PCmpPlGXAlRQVbQesg5AZH,J1KSLj8KWpxLhkSNqLYnDF" />
           <Slot Id="MnHJeUiXDaCPkzbDtfcmKY" Name="Tags" />
-          <Link Id="Q833EJ7GZlHOSxjdEGE1Q9" Ids="GZTgh3kfhVMOQKkPXyw9c2,LeVhnDyuQayQbmKMsWcayr" />
-          <Link Id="RzyN31P4eg4OCF6QDGpNnn" Ids="EzGFSSDabTnOZspNszJ1K1,OeFbXYPicC1NmmD5MklQ1r" />
-          <Link Id="T74U0VjnXrtPjUIX47HudV" Ids="RCjrkV4xdtZOW3pnNaBltF,Kbtm0zzNeBwLvYwS7YoOfo" IsFeedback="true" />
           <Link Id="BxKqsdLoAzYNTtkcdYEVgE" Ids="O9K2CmtpT8xMgg6lpcKuzc,RCjrkV4xdtZOW3pnNaBltF" />
-          <Link Id="SBJD5IFGP2cOpY96laPqZQ" Ids="RCjrkV4xdtZOW3pnNaBltF,TRumYcRjVvaLpir5HbYd4k" />
-          <Link Id="DyHKrrQ2llVLi9k5ITt7f8" Ids="H97FuW8KyYCPjs9FErQO3u,GDkLcOabCDBLaB7Uh1yBdB" IsFeedback="true" />
-          <Link Id="TiBzsZL0vAeNoumkdB8wLD" Ids="Kbtm0zzNeBwLvYwS7YoOfo,H97FuW8KyYCPjs9FErQO3u" />
-          <Link Id="BqB7JJMNwCZLC2heCOpJNz" Ids="H97FuW8KyYCPjs9FErQO3u,GZxpPNyYYxEM3FZixCnn8H" />
-          <Link Id="EkGeoeZDwkXQczsT8CPL0u" Ids="VcMlwKi4YNdNt5AVA5heSp,VBgveldA9lpMLujDuIoeul" IsFeedback="true" />
-          <Link Id="N7fG3QQ9vG4LkSzdAhVBBw" Ids="VVnxlhCx0ZtOzNs8PH2j0E,VcMlwKi4YNdNt5AVA5heSp" />
-          <Link Id="S4nWt7OBptDL025NN41kb7" Ids="VcMlwKi4YNdNt5AVA5heSp,NMzq9GaSemRPLbSxikU1gr" />
-          <Link Id="TqR2QBTvp1xObkr1h4BRbc" Ids="Lny9RHPeT6JLpJfxvcOH9H,UGj4JT6rxJqPZD5A8EfUSD" IsFeedback="true" />
-          <Link Id="HyyFzM5gWK4QZOFQZdSXlz" Ids="VBgveldA9lpMLujDuIoeul,Lny9RHPeT6JLpJfxvcOH9H" />
-          <Link Id="J08vBlMUqFrNC6KB6V28Ef" Ids="Lny9RHPeT6JLpJfxvcOH9H,C3vD1qJxMfJO1VnqFSuPMH" />
-          <Link Id="SL0P1Gcwt3EMs2zkDcNBwl" Ids="VVnxlhCx0ZtOzNs8PH2j0E,MaW0nD9e4AoQSpxs8dFOE3" />
           <Link Id="JWOnljeakeJQIH8ZPYAP2O" Ids="JDhYsen0DhwO5D7aik1mGp,Gep665IGVqYPCnQJvYqWl1" />
           <Link Id="KCVbRzPDOT8QbrYU3t1IHk" Ids="Gep665IGVqYPCnQJvYqWl1,QcCSV8hXT9eOSX8x2ht26D" IsHidden="true" />
-          <Link Id="UyqwC70f8pANNeGQDQoAqV" Ids="GZTgh3kfhVMOQKkPXyw9c2,CCweQXTcbBtLJm7ocjGEeI" />
-          <Link Id="Rshx3KX1PZyLlWP6YhN3Eu" Ids="TDAsKvLIWgcLqxo0u8jM3Q,P6pQuBF1JhcMgX7eti8Nee" />
-          <Link Id="N56iirrAtb6LXQA6pP1s7t" Ids="DrKgrThIA6QPPtRr5VEww8,CGDRfGwNSDtOhAcmIijGKY" IsFeedback="true" />
-          <Link Id="QksydgSrl4bOyxh0kbk6VZ" Ids="DrKgrThIA6QPPtRr5VEww8,O39NiGn6bEJP9RdFAqgRzX" />
-          <Link Id="KsyXphASuOWNEI6u1dHMNu" Ids="J1Ca2AE3ojgPT5eLBapm3o,HBajiVT4zbkP2xsOOZmAaM" IsFeedback="true" />
-          <Link Id="McsbaKUXrV6PztJrs8pxvA" Ids="J1Ca2AE3ojgPT5eLBapm3o,DpfAU8Rs5h7NmKN0hcalbW" />
-          <Link Id="OazgrbSIVG9LVRFnQ08q2D" Ids="GDkLcOabCDBLaB7Uh1yBdB,DrKgrThIA6QPPtRr5VEww8" />
-          <Link Id="UNNesT7Ijj0LPoB0HPQsHq" Ids="UGj4JT6rxJqPZD5A8EfUSD,J1Ca2AE3ojgPT5eLBapm3o" />
           <Link Id="LfvG6AP5tcdPjXyizELZxr" Ids="O9K2CmtpT8xMgg6lpcKuzc,M0ohsYl8koSP8KjAdNYuNZ" />
           <Link Id="SICAL8Lm1C2QBL73TrXUKD" Ids="IitMLneAIrEQOg37mxlGTJ,NdO4S0FKFqLPx5KDhevUjO" />
           <Link Id="VyMrdqO4nIYMjNtw9k5M15" Ids="Tcaz8l0M0b0NXLTw4DCHK4,UOKZypH2Dv9MBALlWJGjtd" />
@@ -1885,59 +1895,103 @@
           <Link Id="SNat8kUCLMEQaTWkBYR7oQ" Ids="TqE8AeCWnYwO2cRuDpO3q8,EasU1eaN5sHPSWIW3PyRwb" />
           <Link Id="Nr9Ur4SzmF5MYEzBrQEQCt" Ids="CrcYyOOeQieLM4ReA9C10S,Qyd2eHklcdSO7VxTJNXd94" />
           <Link Id="Is2u9hfDMVQNgmWz9hPOL0" Ids="N3HOnd33MVoMx2DnvmgDMO,McTmvS39vOgNZgc5NlSVM2" />
-          <Link Id="HW2v4mAHt6AOVxKvPKmYq9" Ids="Uze80RJcpptMmegzS0am1P,M8f4Gnn10hYQESMJqh4G0I" IsHidden="true" />
-          <Link Id="JPckEpEs3wHLFpc4IcJ10U" Ids="MQRzPL0zo2FNbERBuBqAYW,TR8VL6Ph8KLPyYgNDCKhcR" IsHidden="true" />
-          <Link Id="BQPpJ83a1nnMng7cCOdlBn" Ids="AsgqntQz1MJP6Rg4izyEmZ,TdY7yLmnhAAN6CP9n1Qlld" IsHidden="true" />
-          <Link Id="Ni6qxL0pD7SMZrNynjlTUs" Ids="NY5YerdAlwgN1G0epuAm0V,BdbFtklZelMMbyRUgAbgSh" />
-          <Link Id="OfBIhBw8vugM3vbX3NdX2l" Ids="M8f4Gnn10hYQESMJqh4G0I,VhmK1JZSXDKNqPwVkUno5C" />
-          <Link Id="N6k0DJJNqHsOwItviEx1Z6" Ids="D0pWVzEt9v9O3iFccETTNn,SU6T8SsyiBRNU0x8q0yGam" />
           <Link Id="C2ndtWEcQK4MMcS5z4LA6O" Ids="Fq0jWx36cR5OBynva4gyyN,NBEQ9c5pP5xL4i1hiF5iq9" IsHidden="true" />
-          <Link Id="Eqjj6WPsOZwO8hu9MyFUW7" Ids="NoYoY4fNOCSPYe19vI8aOS,QtD2Sv1IeVRPm9gip1mQIo" />
           <Link Id="KNWuCwIKUZ3QK1Ikw46mdz" Ids="NBEQ9c5pP5xL4i1hiF5iq9,Pziqt9a8Ib9ME6vlcr0FKF" />
           <Link Id="GSCeZOfOQUwQDqJd3oC0m8" Ids="T3ivXW0uNPgPT0Mnfc78lO,EFMB2re1B7dMnXEEQVlhVW" />
           <Link Id="TguRZZiSZLJO0XFZOWIqme" Ids="Ei3Q68iM64TOYkugFfAqUZ,E3sRKAUSlhKNynrjTwoHd7" />
           <Link Id="Sz3gkivGpt8PeiRnuu8G69" Ids="QtD2Sv1IeVRPm9gip1mQIo,Q3IJfHVxWkWMUenPRzC3n2" />
           <Link Id="VID33DSLAK6ONx1xgRSsEP" Ids="AvVBN3F57YkO5mUwbRwM4C,KFEi7wLVMFTN54fkAihiJE" />
           <Link Id="BeY4XkjqPtNLK2RLXqBn4S" Ids="EgJEk8CtizmNJ4Cx49V7Sr,Fnz4q9pEdOkNVdefDQ0aZr" />
-          <Link Id="Jcoj2uSnrvQPRmkUXkStW5" Ids="VeuRw9hyjmuLGqh0GgQ6wo,Ou73TZtJsUcOV30raO1dSu" />
           <Link Id="R5zwMg3QFRqMHoPpzUCZii" Ids="MCv0xvVlmEvOG7afK2huyN,S44ewtFYsXUOcVanfJDTV8" />
-          <Link Id="QmufR6Nb094PQYWn6uOPcZ" Ids="Oj6CYqJmFEcLDtt1RAWot8,AsgqntQz1MJP6Rg4izyEmZ" />
           <Link Id="Et7fXlTnYNkO3GmodqS5pR" Ids="BivGW2Vo6GWMTkIzP4NGTK,O8wTNbpu2k2M4WSHCILYA0" IsFeedback="true" />
           <Link Id="M2mNyOUiq6jLVMpFvB6AcC" Ids="QtD2Sv1IeVRPm9gip1mQIo,BivGW2Vo6GWMTkIzP4NGTK" />
           <Link Id="UHxOVqkTkphNbSWSf1Yjfh" Ids="BivGW2Vo6GWMTkIzP4NGTK,NTDxWjxPmSaOkIdSTDx8ic" />
-          <Link Id="Oqkb9jbVVviPBWr0zQv0eM" Ids="HswmmmznHezLV9C8seokuk,MnGKaNUvflpOXnWgi8X8N9" />
-          <Link Id="BdPNH71ROzQNdoKuP6CdwC" Ids="M4Qb4HrTKWPMRS3yo04Ogo,E8oZvD1YW3tQSxs0ByAFyB" />
-          <Link Id="TDE4ByE6ZOSMjazlg2YCVl" Ids="N2GqlKmebJ9MFkG4OlAGhq,MpVdVNsXijaMIxPqMC2bIb" />
           <Link Id="EXaiMx3yKmpONTkMQi3gxJ" Ids="LPsSdCFtUU4LhqzargvKOS,K99iyAzOy63O6UAllvXUaR" />
           <Link Id="MZC4OKly8JmO9SHXdulqER" Ids="VejAHAYurX0O3VEH2976sY,MQcX6D2tEGpNVbxv5Jo9ad" />
           <Link Id="Lm95KCgSh36PY4250j22m6" Ids="Ak1nrU55RGMM6eHJL0Oa2Y,SAaWvjmS4JELh6dNWsRq5v" />
           <Link Id="IPvyZfxy8i2PbRfu563Gv3" Ids="NBEQ9c5pP5xL4i1hiF5iq9,L3aun5eOYoiN3YIT56ARWD" />
+          <Link Id="T3Q5Dxiy9v9Pw33jqPdK5z" Ids="AZKYzTqDuLBPBlIGYLeO85,RJlMvK89mutNLZzWatFEE0" />
+          <Link Id="AlqJoLC6kV3LMs1YvWFRHE" Ids="IFc3bJsjTuQOlxsrI6dd41,Pc0D8u644sfNUpM0dGUXmq" />
+          <Link Id="DgpH5f6wNt0L71ijTkueyE" Ids="VStBIxjfoQwOcSrSFRUAMB,R9Uf2xib7uKPRn9c8Ryi4B" />
+          <Link Id="ANmti6O46nQL3fHwHiEhxl" Ids="HginAyrlGeiLrbhYiOhPfU,SUHSBgtXdGHNurZSilBpJ3" />
+          <Link Id="NnpgWOLgQKxO9CfVOhBXaM" Ids="CakGPAkK8ClQJ8ovj97f3d,J9KSFOpynl3MVCO9BsM36r" />
+          <Link Id="JceFHXXM79kOaWEyq0BGPC" Ids="EgJEk8CtizmNJ4Cx49V7Sr,LXXvfeW0v20PhhfSMQuO5Z" />
+          <Link Id="B2vLMLywbtyNnHavamiMj4" Ids="Fq0jWx36cR5OBynva4gyyN,SXqkgIOs7DpMbKF0ATrijl" IsHidden="true" />
+          <Link Id="Kxdjf45t6YjPJpeEBQuO8q" Ids="Qp7SK2Tq3XyNXs2SUJRZTv,CZDVmff0OCfNVWK3EE5Bbz" />
+          <Link Id="VKaJJz62BD0NtTrebdT7BR" Ids="Oq0XdUdIwbpQGaxruRvSAd,LTCfpsgojoHOQPlW3YiZwf" />
+          <Slot Id="BdL5twl4FLyOspB6RjE6Nl" Name="Value">
+            <p:TypeAnnotation p:Type="TypeReference">
+              <Choice Kind="TypeFlag" Name="IPAddress" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Link Id="IOmCNeeXZycN3yAFXZ1vNg" Ids="TEcmYefunYZMFOAi3EtHZx,RcnKlIj6zHrP4cGaZonjXb" />
+          <Link Id="PCDRTtMU0LUNE7UsEInBNd" Ids="SXqkgIOs7DpMbKF0ATrijl,HR51XWs1DK4OTN5P5Tr72a" />
+          <Link Id="TH7bvK6pcKZPNEesHw6rbP" Ids="LcUUSzHY9ziOnVCRTmVc2t,OW7nooimmRfNgb1hBEJEjW" />
+          <Link Id="CHOhyp5J7RdLkyP1e3v9rv" Ids="D9PYmz4qU8eL3whtnbRHsX,CcshbEJAZS3MHUaRfdxdQu" IsFeedback="true" />
+          <Link Id="DqExCBre588L4blTf1kC5G" Ids="N2GqlKmebJ9MFkG4OlAGhq,MpVdVNsXijaMIxPqMC2bIb" />
+          <Link Id="KgVs1j1dzZlNfy9yCrFBcb" Ids="TICb8CO1gBZPBCvIIqSSiC,F33KijOESt5P6PQfKAErea" />
+          <Link Id="AMuzMUjCpCBQYv1rd3DK4O" Ids="IbNU8LYkuSwLVNRtFYNZN3,PTAbY2hy56WN0ZjNadCWfJ" />
+          <Link Id="MFSen1zD5AkOgFOUnX7KMc" Ids="Vv28O31oA0DPT4eNdfc6xu,Rr33FwudOy7O4cBXSGXlyF" />
+          <Link Id="MnstazsQTZJPxTxz0rgZ3S" Ids="KVVYMVMxqtcPXsRXJOFAxj,TgaPpuFEnSkPXxEwLTtrLK" />
+          <Link Id="TqFxLqt6GNDPXtAHQD1Trq" Ids="CwpCb2DQSNiQXOJiZikzgr,AGmfLOgJafrQFpPN24YRu6" IsHidden="true" />
+          <Link Id="I10X4AFH2omNhDzmKyT2ej" Ids="MaW0nD9e4AoQSpxs8dFOE3,IKFO1o8OdNYLEfxfLw8iva" IsHidden="true" />
+          <Link Id="CkG0f2AZ5I1OSPLpPSH2Tc" Ids="AGmfLOgJafrQFpPN24YRu6,PDSI3Zj3yJ1Ndl5qirkCvj" />
+          <Link Id="Nguk0H3SX9pMVAGO41B8LH" Ids="GHfFWAfyz6XOjbIxIJ0CCV,MmNAUcIxml8NpXFBtXfLZG" />
+          <Link Id="Ca54sjstgPnOe305SjiU8l" Ids="GZTgh3kfhVMOQKkPXyw9c2,CI9SRwc2sJfQMi6GAV7Bq0" />
+          <Link Id="UMtwWtX3GvzQRzeQQ30lXN" Ids="PCmpPlGXAlRQVbQesg5AZH,J1KSLj8KWpxLhkSNqLYnDF" />
+          <Link Id="Q833EJ7GZlHOSxjdEGE1Q9" Ids="GZTgh3kfhVMOQKkPXyw9c2,LeVhnDyuQayQbmKMsWcayr" />
+          <Link Id="RzyN31P4eg4OCF6QDGpNnn" Ids="EzGFSSDabTnOZspNszJ1K1,OeFbXYPicC1NmmD5MklQ1r" />
+          <Link Id="T74U0VjnXrtPjUIX47HudV" Ids="RCjrkV4xdtZOW3pnNaBltF,Kbtm0zzNeBwLvYwS7YoOfo" IsFeedback="true" />
+          <Link Id="SBJD5IFGP2cOpY96laPqZQ" Ids="RCjrkV4xdtZOW3pnNaBltF,TRumYcRjVvaLpir5HbYd4k" />
+          <Link Id="DyHKrrQ2llVLi9k5ITt7f8" Ids="H97FuW8KyYCPjs9FErQO3u,GDkLcOabCDBLaB7Uh1yBdB" IsFeedback="true" />
+          <Link Id="TiBzsZL0vAeNoumkdB8wLD" Ids="Kbtm0zzNeBwLvYwS7YoOfo,H97FuW8KyYCPjs9FErQO3u" />
+          <Link Id="BqB7JJMNwCZLC2heCOpJNz" Ids="H97FuW8KyYCPjs9FErQO3u,GZxpPNyYYxEM3FZixCnn8H" />
+          <Link Id="EkGeoeZDwkXQczsT8CPL0u" Ids="VcMlwKi4YNdNt5AVA5heSp,VBgveldA9lpMLujDuIoeul" IsFeedback="true" />
+          <Link Id="N7fG3QQ9vG4LkSzdAhVBBw" Ids="VVnxlhCx0ZtOzNs8PH2j0E,VcMlwKi4YNdNt5AVA5heSp" />
+          <Link Id="S4nWt7OBptDL025NN41kb7" Ids="VcMlwKi4YNdNt5AVA5heSp,NMzq9GaSemRPLbSxikU1gr" />
+          <Link Id="TqR2QBTvp1xObkr1h4BRbc" Ids="Lny9RHPeT6JLpJfxvcOH9H,UGj4JT6rxJqPZD5A8EfUSD" IsFeedback="true" />
+          <Link Id="HyyFzM5gWK4QZOFQZdSXlz" Ids="VBgveldA9lpMLujDuIoeul,Lny9RHPeT6JLpJfxvcOH9H" />
+          <Link Id="J08vBlMUqFrNC6KB6V28Ef" Ids="Lny9RHPeT6JLpJfxvcOH9H,C3vD1qJxMfJO1VnqFSuPMH" />
+          <Link Id="SL0P1Gcwt3EMs2zkDcNBwl" Ids="VVnxlhCx0ZtOzNs8PH2j0E,MaW0nD9e4AoQSpxs8dFOE3" />
+          <Link Id="UyqwC70f8pANNeGQDQoAqV" Ids="GZTgh3kfhVMOQKkPXyw9c2,CCweQXTcbBtLJm7ocjGEeI" />
+          <Link Id="Rshx3KX1PZyLlWP6YhN3Eu" Ids="TDAsKvLIWgcLqxo0u8jM3Q,P6pQuBF1JhcMgX7eti8Nee" />
+          <Link Id="N56iirrAtb6LXQA6pP1s7t" Ids="DrKgrThIA6QPPtRr5VEww8,CGDRfGwNSDtOhAcmIijGKY" IsFeedback="true" />
+          <Link Id="QksydgSrl4bOyxh0kbk6VZ" Ids="DrKgrThIA6QPPtRr5VEww8,O39NiGn6bEJP9RdFAqgRzX" />
+          <Link Id="KsyXphASuOWNEI6u1dHMNu" Ids="J1Ca2AE3ojgPT5eLBapm3o,HBajiVT4zbkP2xsOOZmAaM" IsFeedback="true" />
+          <Link Id="McsbaKUXrV6PztJrs8pxvA" Ids="J1Ca2AE3ojgPT5eLBapm3o,DpfAU8Rs5h7NmKN0hcalbW" />
+          <Link Id="OazgrbSIVG9LVRFnQ08q2D" Ids="GDkLcOabCDBLaB7Uh1yBdB,DrKgrThIA6QPPtRr5VEww8" />
+          <Link Id="UNNesT7Ijj0LPoB0HPQsHq" Ids="UGj4JT6rxJqPZD5A8EfUSD,J1Ca2AE3ojgPT5eLBapm3o" />
+          <Link Id="HW2v4mAHt6AOVxKvPKmYq9" Ids="Uze80RJcpptMmegzS0am1P,M8f4Gnn10hYQESMJqh4G0I" IsHidden="true" />
+          <Link Id="JPckEpEs3wHLFpc4IcJ10U" Ids="MQRzPL0zo2FNbERBuBqAYW,TR8VL6Ph8KLPyYgNDCKhcR" IsHidden="true" />
+          <Link Id="BQPpJ83a1nnMng7cCOdlBn" Ids="AsgqntQz1MJP6Rg4izyEmZ,TdY7yLmnhAAN6CP9n1Qlld" IsHidden="true" />
+          <Link Id="Ni6qxL0pD7SMZrNynjlTUs" Ids="NY5YerdAlwgN1G0epuAm0V,BdbFtklZelMMbyRUgAbgSh" />
+          <Link Id="OfBIhBw8vugM3vbX3NdX2l" Ids="M8f4Gnn10hYQESMJqh4G0I,VhmK1JZSXDKNqPwVkUno5C" />
+          <Link Id="Jcoj2uSnrvQPRmkUXkStW5" Ids="VeuRw9hyjmuLGqh0GgQ6wo,Ou73TZtJsUcOV30raO1dSu" />
+          <Link Id="QmufR6Nb094PQYWn6uOPcZ" Ids="Oj6CYqJmFEcLDtt1RAWot8,AsgqntQz1MJP6Rg4izyEmZ" />
           <Link Id="FaI5sksR4ybOacN4Ueeuie" Ids="GZTgh3kfhVMOQKkPXyw9c2,PM6B0AMwdtvN2hbKNFYWpo" />
           <Link Id="S8RzwEw0PLANULw2gRUXM6" Ids="DKSmCv6rgkgL8cO2GKjz6n,CmLZZQEHXlyPZjkHH3Qc8l" />
           <Link Id="FUx4SoOheKGNk8D0JaYWty" Ids="N4N4xoc09lDMQFbAuwCMxr,S8YwqVX505dLkLWEIeZoEM" IsFeedback="true" />
           <Link Id="HGDGOOqRCeiPZbcPIOyxSJ" Ids="Cxk634RdB3PQO4fdz34xwN,QofjImyWwN5Mcha4g4l2JU" IsFeedback="true" />
-          <Link Id="T3Q5Dxiy9v9Pw33jqPdK5z" Ids="AZKYzTqDuLBPBlIGYLeO85,RJlMvK89mutNLZzWatFEE0" />
           <Link Id="QHL0VRcsNnoOeilrVmzI5U" Ids="Cxk634RdB3PQO4fdz34xwN,B6rO0lNcdKYL48VPJCps6s" />
           <Link Id="G3dD1It3Ut2NXtXptcYNJp" Ids="N4N4xoc09lDMQFbAuwCMxr,U8pRVwNTrPANzon2Tv6rCk" />
-          <Link Id="AlqJoLC6kV3LMs1YvWFRHE" Ids="IFc3bJsjTuQOlxsrI6dd41,Pc0D8u644sfNUpM0dGUXmq" />
-          <Link Id="DgpH5f6wNt0L71ijTkueyE" Ids="VStBIxjfoQwOcSrSFRUAMB,R9Uf2xib7uKPRn9c8Ryi4B" />
           <Link Id="Og9CWSjPm0eM8AKtmzdmFc" Ids="GZTgh3kfhVMOQKkPXyw9c2,E2D37NrGUPvQXcktGJbALm" />
           <Link Id="H0nXJMycG4gLkmLMxR0LYD" Ids="RNg4B1iIiiJP12yp5vp6bH,FlyOwk5L54gLDOgVLMjTvi" />
           <Link Id="DCZPjaieQLsQU0BsZWSvHB" Ids="Oj73lCLMNZwOKakNj8IZsV,O61zU0CyIOwQY4fMSM4sfZ" IsFeedback="true" />
           <Link Id="RjXLwA8NlYNO6PzB3Ig4v8" Ids="Oj73lCLMNZwOKakNj8IZsV,RFt6xzVJ5nELFU6usdSPwL" />
           <Link Id="LzXTofpItfmM5aQjdBllHt" Ids="KECtI6bDAWgNJvJZ3JrN08,NPRw0GA1MnUNdb6i6gMcX6" IsFeedback="true" />
           <Link Id="AdfdeTajN1SMKrYxQui28E" Ids="KECtI6bDAWgNJvJZ3JrN08,TmDkQVAzN7DNG2g3LJIeTx" />
-          <Link Id="ANmti6O46nQL3fHwHiEhxl" Ids="HginAyrlGeiLrbhYiOhPfU,SUHSBgtXdGHNurZSilBpJ3" />
           <Link Id="RgWoTsrexGRLhH7EvhHJEx" Ids="HBajiVT4zbkP2xsOOZmAaM,KECtI6bDAWgNJvJZ3JrN08" />
           <Link Id="MjDJDfmrXSlNFZt7IVUFuk" Ids="CGDRfGwNSDtOhAcmIijGKY,Oj73lCLMNZwOKakNj8IZsV" />
           <Link Id="ElawP1Joiy0OTNATANHeiH" Ids="NPRw0GA1MnUNdb6i6gMcX6,Cxk634RdB3PQO4fdz34xwN" />
           <Link Id="Q9oCfIp8nh2L0XA0WKZ8X3" Ids="O61zU0CyIOwQY4fMSM4sfZ,N4N4xoc09lDMQFbAuwCMxr" />
-          <Link Id="NnpgWOLgQKxO9CfVOhBXaM" Ids="CakGPAkK8ClQJ8ovj97f3d,J9KSFOpynl3MVCO9BsM36r" />
-          <Link Id="JceFHXXM79kOaWEyq0BGPC" Ids="EgJEk8CtizmNJ4Cx49V7Sr,LXXvfeW0v20PhhfSMQuO5Z" />
-          <Link Id="B2vLMLywbtyNnHavamiMj4" Ids="Fq0jWx36cR5OBynva4gyyN,SXqkgIOs7DpMbKF0ATrijl" IsHidden="true" />
-          <Link Id="G2qodvXPBYiPyX02iSbZAD" Ids="SXqkgIOs7DpMbKF0ATrijl,EJX4ozUuvM2P1nD5suE4gM" />
-          <Link Id="KTiTHGsyAfbMDJoirxPvZB" Ids="LP35Q4Cvx7NNRx4jIMI8fV,D3QbMYqgz3MLfm82AaE6t0" />
-          <Link Id="Kxdjf45t6YjPJpeEBQuO8q" Ids="Qp7SK2Tq3XyNXs2SUJRZTv,CZDVmff0OCfNVWK3EE5Bbz" />
+          <Link Id="EHe1XLHxZZSQPozBE39UY0" Ids="IkwkAOczcKCLiUY1vAegtQ,UNTVQ7MxvJFQJqNs0RXsDs" />
+          <Link Id="IzpVrND70nKOLehYX5HGFI" Ids="NoYoY4fNOCSPYe19vI8aOS,CcshbEJAZS3MHUaRfdxdQu" />
+          <Link Id="KpSZ4XIUTKJM2h2OMkS4eT" Ids="CcshbEJAZS3MHUaRfdxdQu,QtD2Sv1IeVRPm9gip1mQIo" />
+          <Link Id="DSUC8KH7UnmMxtFIAbo9rY" Ids="VJdPKzbXC8gNjdodz06RMY,EqEHJsi3CKnP6zEsHmUKdB" IsFeedback="true" />
+          <Link Id="A2cWKwguAmAP0ublAUjDdO" Ids="D0pWVzEt9v9O3iFccETTNn,EqEHJsi3CKnP6zEsHmUKdB" />
+          <Link Id="V5ZDk7mDXOfQUkGUlYDQhp" Ids="EqEHJsi3CKnP6zEsHmUKdB,SU6T8SsyiBRNU0x8q0yGam" />
+          <Link Id="KzWWBA1vMhAN8TkZNMaAYo" Ids="EsuH8rakbduLEohz4KeTul,EJX4ozUuvM2P1nD5suE4gM" />
+          <Link Id="RBFtZvaGCIBPF6i8VTk4oU" Ids="M4Qb4HrTKWPMRS3yo04Ogo,MnGKaNUvflpOXnWgi8X8N9" />
         </Patch>
       </Node>
       <!--
