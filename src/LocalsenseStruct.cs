@@ -17,6 +17,7 @@ namespace LsWebsocketClient
         FrameTypeWgsPosition = 0xB4,
         FrameTypeGlobalPosition = 0xB5,
         FrameTypeJsonVideoTraceRes = 0xBF,
+        FrameTypeVitalSignData = 0xD7,
     }
 
     public enum LsWebsocketSubProtocol
@@ -42,6 +43,15 @@ namespace LsWebsocketClient
         ControlTypeBuzzOnly,
         ControlTypeVibrateBuzz,
         ControlTypeStop,
+    }
+
+    public enum LsVitalSignType
+    {
+        VitalSignTypeUnknown,
+        VitalSignTypeHeartRate,
+        VitalSignTypeBloodOxygen,
+        VitalSignTypeTemperature,
+        VitalSignTypeBloodPressure,
     }
 
     public struct LsPosition
@@ -177,12 +187,13 @@ namespace LsWebsocketClient
         public int Port;
         public string Username;
         public string Password;
-        //Type of Camera,1:Hikvision 2:Tiandys 3:Dahua 4:Uniview
+
         // 摄像头类型, 1：海康 2：天地伟业 3：大华 4： 宇视
+        // Camera type, 1: Haikang 2: Tiandi Weiye 3: Dahua 4: Yushi
         public int DeviceType;
 
         // 码流类型,1: 主码流  2：子码流
-        // stream type 1:Main Stream 2:Sub Stream
+        // Bitstream type,1: main bitstream and 2: subbitstream
         public string StreamType;
         public string ProtocolType;
         public int Channel;
@@ -192,6 +203,15 @@ namespace LsWebsocketClient
     {
         public LsTagVideoInfo VideoInfo;
         public List<LsTagVideoInfo> Videos;
+    }
+
+    public struct LsVitalSignData
+    {
+        public ulong TagId;
+        public LsVitalSignType Type;
+        public short Data;
+        public short Data_Extend;
+        public ulong Timestamp;
     }
     
     public struct LsWebsocketParams

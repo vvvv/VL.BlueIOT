@@ -635,6 +635,23 @@ namespace LsWebsocketClient
 
             return iots;
         }
+		
+		public static LsVitalSignData DecodeVitalSignData(byte[] data)
+        {
+            int idx = 3;
+            LsVitalSignData vitalSignData = new LsVitalSignData();
+            vitalSignData.TagId = data.SubArray(idx, 8).To<ulong>(ByteOrder.Big);
+            idx += 8;
+            vitalSignData.Type = (LsVitalSignType)data[idx];
+            idx ++;
+            vitalSignData.Data = data.SubArray(idx, 2).To<short>(ByteOrder.Big);
+            idx += 2;
+            vitalSignData.Data_Extend = data.SubArray(idx, 2).To<short>(ByteOrder.Big);
+            idx += 2;
+            vitalSignData.Timestamp = data.SubArray(idx, 8).To<ulong>(ByteOrder.Big);
+            idx += 8;
+            return vitalSignData;
+        }
 
         // 以下是编码函数
         // Below is the encoding function
