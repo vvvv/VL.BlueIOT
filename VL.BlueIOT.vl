@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="EpNhJx3oilAOXp6nCqrw8k" LanguageVersion="2024.6.6" Version="0.128">
-  <NugetDependency Id="DB0ZwREP8dmNR0m89D4SrS" Location="VL.CoreLib" Version="2024.6.6" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="EpNhJx3oilAOXp6nCqrw8k" LanguageVersion="2025.7.0-0344-g302a3d8c09" Version="0.128">
+  <NugetDependency Id="DB0ZwREP8dmNR0m89D4SrS" Location="VL.CoreLib" Version="2025.7.0-0344-g302a3d8c09" />
   <Patch Id="KPCaPrMgaLbMYPRWv86mpR">
     <Canvas Id="GpJWlm3vs6VP558X2PjvXH" DefaultCategory="Devices.BlueIOT" CanvasType="FullCategory">
       <!--
@@ -203,6 +203,7 @@
                       <Pin Id="AaqlRvWIOlcPEaxxmoghwN" Name="Node Context" Kind="InputPin" IsHidden="true" />
                       <Pin Id="Rr33FwudOy7O4cBXSGXlyF" Name="Messages" Kind="InputPin" />
                       <Pin Id="TcOqHGSDVpBL4eyhTlh9bp" Name="Reset" Kind="InputPin" />
+                      <Pin Id="NLjPK4htoMcNWuyDX1rpzS" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="K85WOhOy9G2OSFENYC24ul" Name="Result" Kind="OutputPin" />
                       <Patch Id="N4fmqefoypaOWet1QhZ7jj" ManuallySortedPins="true">
                         <Patch Id="JLr6jzyC9o2NOrjZhyBB9b" Name="Create" ManuallySortedPins="true" />
@@ -446,21 +447,12 @@
                   <ControlPoint Id="EqEHJsi3CKnP6zEsHmUKdB" Bounds="292,1933" Alignment="Bottom" />
                   <ControlPoint Id="VJdPKzbXC8gNjdodz06RMY" Bounds="292,869" Alignment="Top" />
                 </Node>
-                <Pad Id="EsuH8rakbduLEohz4KeTul" Comment="disable reconnect, see:" Bounds="186,735,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                <Pad Id="EsuH8rakbduLEohz4KeTul" Comment="" Bounds="186,735,35,35" ShowValueBox="true" isIOBox="true" Value="True">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                   </p:TypeAnnotation>
                   <p:ValueBoxSettings>
                     <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-                  </p:ValueBoxSettings>
-                </Pad>
-                <Pad Id="Dst2TINIl7TO8fsB6aqmAk" Bounds="224,752,140,19" ShowValueBox="true" isIOBox="true" Value="https://github.com/vvvv/VL.BlueIOT/issues/1">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-                    <Choice Kind="TypeFlag" Name="String" />
-                  </p:TypeAnnotation>
-                  <p:ValueBoxSettings>
-                    <p:fontsize p:Type="Int32">9</p:fontsize>
-                    <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
                   </p:ValueBoxSettings>
                 </Pad>
               </Patch>
@@ -1322,6 +1314,7 @@
               <Pin Id="OdECaav451hMFOWn2WNKh5" Name="Initial Result" Kind="InputPin" IsHidden="true" />
               <Pin Id="OSLPsQYHTFBMZskUxhfmPv" Name="Async Notifications" Kind="InputPin" />
               <Pin Id="MgCC99If86iQVxTpuwTEqJ" Name="Reset" Kind="InputPin" />
+              <Pin Id="RqzXQP4rn9kL8pSIg4Djzh" Name="Output" Kind="OutputPin" IsHidden="true" />
               <Pin Id="MCv0xvVlmEvOG7afK2huyN" Name="Value" Kind="OutputPin" />
               <Pin Id="BLhiu2VZjWgPLCVxToBC1d" Name="On Data" Kind="OutputPin" />
             </Node>

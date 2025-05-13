@@ -1,7 +1,7 @@
 # VL.BlueIOT
 Support for the [BlueIOT open api](https://www.blueiot.com/product/open-api/).
 
-For use with vvvv, the visual live-programming environment for .NET: http://visualprogramming.net
+For use with vvvv, the visual live-programming environment for .NET: http://vvvv.org
 
 ## Getting started
 - Install as [described here](https://thegraybook.vvvv.org/reference/hde/managing-nugets.html) via commandline:

@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading;
-using WebSocketSharp;
+using WatsonWebsocket;
 
 namespace LsWebsocketClient
 {
-    public class LsWebsocketInterface : System.IDisposable
+    public class LsWebsocketInterface : IDisposable
     {
-        private WebSocket _wsRealData;
-        private WebSocket _wsCtrl;
+        private WatsonWsClient _wsRealData;
+        private WatsonWsClient _wsCtrl;
         private readonly LsWebsocketParams _lsWebsocketParams;
         private bool _disposed = false;
+
+        public Action<string> Logger;
 
         public void Dispose()
         {
@@ -27,13 +26,13 @@ namespace LsWebsocketClient
             _disposed = true;
             if (_wsRealData != null)
             {
-                _wsRealData.Close();
+                _wsRealData.Dispose();
                 _wsRealData = null;
             }
 
             if (_wsCtrl != null)
             {
-                _wsCtrl.Close();
+                _wsCtrl.Dispose();
                 _wsCtrl = null;
             }
         }
@@ -42,9 +41,48 @@ namespace LsWebsocketClient
 
         public event LsWebsocketMessageHandle MessageEvent;
 
+        void InvokeMessageEvent(LsFrameType frameType, object data)
+        {
+            MessageEvent?.Invoke(frameType, data);
+            MessageEvent2?.Invoke(this, new LSMessageHandle(frameType, data));
+        }
+
+        public struct LSMessageHandle
+        {
+            public LsFrameType FrameType;
+            public object Data;
+
+            public LSMessageHandle(LsFrameType frameType, object data)
+            {
+                FrameType = frameType;
+                Data = data;
+            }
+        }
+
+        public event EventHandler<LSMessageHandle> MessageEvent2;
         public delegate void LsWebsocketStatusHandle(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol);
 
         public event LsWebsocketStatusHandle WebsocketStatusEvent;
+
+        void InvokeWebSocketStatusEvent(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol)
+        {
+            WebsocketStatusEvent?.Invoke(status, subProtocol);
+            WebsocketStatusEvent2?.Invoke(this, new LSStatusHandle(status, subProtocol));
+        }
+
+        public struct LSStatusHandle
+        {
+            public LsWebsocketStatus Status;
+            public LsWebsocketSubProtocol SubProtocol;
+
+            public LSStatusHandle(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol)
+            {
+                Status = status;
+                SubProtocol = subProtocol;
+            }
+        }
+
+        public event EventHandler<LSStatusHandle> WebsocketStatusEvent2;
 
         public LsWebsocketInterface(LsWebsocketParams lsWebsocketParams)
         {
@@ -57,57 +95,57 @@ namespace LsWebsocketClient
                 (int)LsWebsocketSubProtocol.SubProtocolRealTimeData)
             {
                 _wsRealData = InternalConnect("localSensePush-protocol");
-                _wsRealData.Connect();
+                _wsRealData.Start();
             }
 
             if (((int)_lsWebsocketParams.SubProtocol & (int)LsWebsocketSubProtocol.SubProtocolCtrl) ==
                 (int)LsWebsocketSubProtocol.SubProtocolCtrl)
             {
                 _wsCtrl = InternalConnect("localSense-Json");
-                _wsCtrl.Connect();
+                _wsCtrl.Start();
             }
         }
 
         public void DisconnectFromServer()
         {
-            if (_wsRealData != null && _wsRealData.IsAlive)
+            if (_wsRealData != null && _wsRealData.Connected)
             {
-                _wsRealData.Close();
+                _wsRealData.Stop();
             }
-            if (_wsCtrl != null && _wsCtrl.IsAlive)
+            if (_wsCtrl != null && _wsCtrl.Connected)
             {
-                _wsCtrl.Close();
+                _wsCtrl.Stop();
             }
         }
 
         public void VideoTraceRequest(ulong tagId, bool op)
         {
             string txt = LsProtocol.EncodeVideoTraceRequest(tagId, op);
-            _wsCtrl.Send(txt);
+            _wsCtrl.SendAsync(txt);
         }
 
         public void TagControlRequest(ulong tagId, LsTagControlType controlType)
         {
             var data = LsProtocol.EncodeTagControl(tagId, controlType);
-            _wsCtrl.Send(data);
+            _wsCtrl.SendAsync(data);
         }
 
         public void SubscribeViaTagId(List<ulong> tagIdList)
         {
             var data = LsProtocol.EncodeSubscribeTagIds(tagIdList);
-            _wsRealData.Send(data);
+            _wsRealData.SendAsync(data);
         }
 
         public void SubscribeViaGroupId(List<string> groupIdList)
         {
             var data = LsProtocol.EncodeSubscribeGroupIds(groupIdList);
-            _wsRealData.Send(data);
+            _wsRealData.SendAsync(data);
         }
 
         public void SubscribeViaMapId(List<uint> mapIdList)
         {
             var data = LsProtocol.EncodeSubscribeMapIds(mapIdList);
-            _wsRealData.Send(data);
+            _wsRealData.SendAsync(data);
         }
 
         public string WebsocketSdkVersion()
@@ -115,61 +153,62 @@ namespace LsWebsocketClient
             return Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
-        private WebSocket InternalConnect(string subProtocol)
+        private WatsonWsClient InternalConnect(string subProtocol)
         {
-            string[] protocols = { subProtocol };
             string url = String.Format("ws://{0}:{1}", _lsWebsocketParams.Domain, _lsWebsocketParams.Port);
             if (_lsWebsocketParams.BWss)
             {
                 url = String.Format("wss://{0}:{1}", _lsWebsocketParams.Domain, _lsWebsocketParams.Port);
             }
+            Uri.TryCreate(url, UriKind.Absolute, out var uri);
 
-            var ws = new WebSocket(url, protocols);
-            ws.Log.Level = LogLevel.Fatal;
+            var ws = new WatsonWsClient(uri);
+            ws.ConfigureOptions(o  => { o.AddSubProtocol(subProtocol); });
 
-            ws.OnOpen += (sender, e) =>
+            ws.Logger = (s) => { Logger?.Invoke(s); };
+
+            ws.ServerConnected += (sender, e) =>
                 HandleOpen(sender, e);
 
-            ws.OnClose += (sender, e) => 
+            ws.ServerDisconnected += (sender, e) => 
                 HandleClose(sender, e);
 
-            ws.OnError += (sender, e) =>
-                HandleError(sender, e);
-
-            ws.OnMessage += (sender, e) =>
-                HandleMessage(e.RawData);
+            ws.MessageReceived += (sender, e) =>
+                HandleMessage(e.Data.ToArray());
 
             return ws;
         }
 
         private void HandleOpen(object sender, EventArgs eventArgs)
         {
-            if (sender == _wsCtrl && WebsocketStatusEvent != null)
+            if (sender == _wsCtrl)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
                     LsWebsocketSubProtocol.SubProtocolCtrl);
             }
 
-            if (sender == _wsRealData && WebsocketStatusEvent != null)
+            if (sender == _wsRealData)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusConnected,
                     LsWebsocketSubProtocol.SubProtocolRealTimeData);
             }
-            ((WebSocket)sender).Send(LsProtocol.GetAuth(_lsWebsocketParams.Username,
+
+            if (sender != null)
+                ((WatsonWsClient)sender).SendAsync(LsProtocol.GetAuth(_lsWebsocketParams.Username,
                 _lsWebsocketParams.Password, _lsWebsocketParams.Salt));
         }
 
-        private void HandleClose(object sender, CloseEventArgs eventArgs)
+        private void HandleClose(object sender, EventArgs eventArgs)
         {
-            if (sender == _wsCtrl && WebsocketStatusEvent != null)
+            if (sender == _wsCtrl)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
                     LsWebsocketSubProtocol.SubProtocolCtrl);
             }
 
-            if (sender == _wsRealData && WebsocketStatusEvent != null)
+            if (sender == _wsRealData )
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusClosed,
                     LsWebsocketSubProtocol.SubProtocolRealTimeData);
             }
 
@@ -178,89 +217,84 @@ namespace LsWebsocketClient
                 return;
             }
             Thread.Sleep(_lsWebsocketParams.ReconnectInterval * 1000);
-            if (sender != null && !((WebSocket)sender).IsAlive)
+            if (sender != null && !((WatsonWsClient)sender).Connected)
             {
-                ((WebSocket)sender).Connect();
+                ((WatsonWsClient)sender).Start();
             }
         }
 
         private void HandleError(object sender, ErrorEventArgs eventArgs)
         {
-            if (sender == _wsCtrl && WebsocketStatusEvent != null)
+            if (sender == _wsCtrl)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
                     LsWebsocketSubProtocol.SubProtocolCtrl);
             }
 
-            if (sender == _wsRealData && WebsocketStatusEvent != null)
+            if (sender == _wsRealData)
             {
-                WebsocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
+                InvokeWebSocketStatusEvent(LsWebsocketStatus.WebsocketStatusError,
                     LsWebsocketSubProtocol.SubProtocolRealTimeData);
             }
         }
 
         private void HandleMessage(byte[] data)
         {
-            if (MessageEvent == null)
-            {
-                return;
-            }
-
             var type = LsProtocol.GetFrameType(data);
             switch (type)
             {
                 case LsFrameType.FrameTypePosition:
-                    MessageEvent(type, LsProtocol.DecodePosition(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodePosition(data));
                     break;
 
                 case LsFrameType.FrameTypeWgsPosition:
-                    MessageEvent(type, LsProtocol.DecodeWgsPosition(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodeWgsPosition(data));
                     break;
 
                 case LsFrameType.FrameTypeGlobalPosition:
-                    MessageEvent(type, LsProtocol.DecodePosition(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodePosition(data));
                     break;
 
                 case LsFrameType.FrameTypeAlarmEx:
-                    MessageEvent(type, LsProtocol.DecodeAlarmInfo(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodeAlarmInfo(data));
                     break;
 
                 case LsFrameType.FrameTypeJsonVideoTraceRes:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type, 
                         LsProtocol.DecodeTagVideoTrace(Encoding.ASCII.GetString(data)));
                     break;
 
                 case LsFrameType.FrameTypeAreaInOut:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeAreaInOut(data));
                     break;
 
                 case LsFrameType.FrameTypeBattery:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeBattery(data));
                     break;
 
                 case LsFrameType.FrameTypeBaseStatus:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeBaseStatus(data));
                     break;
 
                 case LsFrameType.FrameTypeExternData:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeTagExtendData(data));
                     break;
 
                 case LsFrameType.FrameTypeAreaStatistics:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeAreaStatistics(data));
                     break;
 
                 case LsFrameType.FrameTypeTagCountStatistics:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeTagCountStatistics(data));
                     break;
                 case LsFrameType.FrameTypeCustomIot:
-                    MessageEvent(type,
+                    InvokeMessageEvent(type,
                         LsProtocol.DecodeCustomIot(data));
                     break;
 				case LsFrameType.FrameTypeVitalSignData:
