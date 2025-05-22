@@ -14,7 +14,7 @@
     <icon>icon\nugeticon.png</icon>
     <readme>docs\README.md</readme>
     <dependencies>
-		<dependency id="WatsonWebsocket" version="4.1.4" />
+		<dependency id="WatsonWebsocket" version="4.1.2" />
 		<dependency id="Newtonsoft.Json" version="13.0.3" />
     </dependencies>
   </metadata>

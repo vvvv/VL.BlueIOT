@@ -118,7 +118,7 @@ namespace LsWebsocketClient
             if (sourceOrder.IsHostOrder())
                 return source;
 
-            return (byte[])source.Reverse();
+            return (byte[])source.Reverse().ToArray();
         }
 
         internal static ushort ToUInt16(this byte[] source, ByteOrder sourceOrder)

@@ -7,12 +7,12 @@ namespace LsWebsocketClient
 {
     public class LsWebsocketInterface : IDisposable
     {
-        private WatsonWsClient _wsRealData;
-        private WatsonWsClient _wsCtrl;
+        private WatsonWsClient? _wsRealData;
+        private WatsonWsClient? _wsCtrl;
         private readonly LsWebsocketParams _lsWebsocketParams;
         private bool _disposed = false;
 
-        public Action<string> Logger;
+        public Action<string>? Logger;
 
         public void Dispose()
         {
@@ -38,8 +38,13 @@ namespace LsWebsocketClient
         }
 
         public delegate void LsWebsocketMessageHandle(LsFrameType frameType, object data);
+        public delegate void LsWebsocketStatusHandle(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol);
 
         public event LsWebsocketMessageHandle MessageEvent;
+        public event EventHandler<LSMessageHandle> MessageEvent2;
+
+        public event LsWebsocketStatusHandle WebsocketStatusEvent;
+        public event EventHandler<LSStatusHandle> WebsocketStatusEvent2;
 
         void InvokeMessageEvent(LsFrameType frameType, object data)
         {
@@ -59,11 +64,6 @@ namespace LsWebsocketClient
             }
         }
 
-        public event EventHandler<LSMessageHandle> MessageEvent2;
-        public delegate void LsWebsocketStatusHandle(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol);
-
-        public event LsWebsocketStatusHandle WebsocketStatusEvent;
-
         void InvokeWebSocketStatusEvent(LsWebsocketStatus status, LsWebsocketSubProtocol subProtocol)
         {
             WebsocketStatusEvent?.Invoke(status, subProtocol);
@@ -82,8 +82,6 @@ namespace LsWebsocketClient
             }
         }
 
-        public event EventHandler<LSStatusHandle> WebsocketStatusEvent2;
-
         public LsWebsocketInterface(LsWebsocketParams lsWebsocketParams)
         {
             this._lsWebsocketParams = lsWebsocketParams;
@@ -95,62 +93,93 @@ namespace LsWebsocketClient
                 (int)LsWebsocketSubProtocol.SubProtocolRealTimeData)
             {
                 _wsRealData = InternalConnect("localSensePush-protocol");
-                _wsRealData.Start();
+                _wsRealData.StartAsync();
             }
 
             if (((int)_lsWebsocketParams.SubProtocol & (int)LsWebsocketSubProtocol.SubProtocolCtrl) ==
                 (int)LsWebsocketSubProtocol.SubProtocolCtrl)
             {
                 _wsCtrl = InternalConnect("localSense-Json");
-                _wsCtrl.Start();
+                _wsCtrl.StartAsync();
             }
         }
 
         public void DisconnectFromServer()
         {
-            if (_wsRealData != null && _wsRealData.Connected)
+            if (_wsRealData != null)
             {
-                _wsRealData.Stop();
+                _wsRealData.Dispose();
+                _wsRealData = null;
             }
-            if (_wsCtrl != null && _wsCtrl.Connected)
+            if (_wsCtrl != null)
             {
-                _wsCtrl.Stop();
+                _wsCtrl.Dispose();
+                _wsCtrl = null;
             }
         }
 
         public void VideoTraceRequest(ulong tagId, bool op)
         {
-            string txt = LsProtocol.EncodeVideoTraceRequest(tagId, op);
-            _wsCtrl.SendAsync(txt);
+            if (_wsCtrl != null)
+            {
+                string txt = LsProtocol.EncodeVideoTraceRequest(tagId, op);
+                _wsCtrl.SendAsync(txt);
+            }
+            else
+                throw new Exception("WebSocket not instantiated!");
         }
 
         public void TagControlRequest(ulong tagId, LsTagControlType controlType)
         {
-            var data = LsProtocol.EncodeTagControl(tagId, controlType);
-            _wsCtrl.SendAsync(data);
+            if (_wsCtrl != null)
+            {
+                var data = LsProtocol.EncodeTagControl(tagId, controlType);
+                _wsCtrl.SendAsync(data);
+            }
+            else
+                throw new Exception("WebSocket not instantiated!");
         }
 
         public void SubscribeViaTagId(List<ulong> tagIdList)
         {
-            var data = LsProtocol.EncodeSubscribeTagIds(tagIdList);
-            _wsRealData.SendAsync(data);
+            if (_wsRealData != null)
+            {
+                var data = LsProtocol.EncodeSubscribeTagIds(tagIdList);
+                _wsRealData.SendAsync(data);
+            }
+            else
+                throw new Exception("WebSocket not instantiated!");
         }
 
         public void SubscribeViaGroupId(List<string> groupIdList)
         {
-            var data = LsProtocol.EncodeSubscribeGroupIds(groupIdList);
-            _wsRealData.SendAsync(data);
+            if (_wsRealData != null)
+            {
+                var data = LsProtocol.EncodeSubscribeGroupIds(groupIdList);
+                _wsRealData.SendAsync(data);
+            }
+            else
+                throw new Exception("WebSocket not instantiated!");
         }
 
         public void SubscribeViaMapId(List<uint> mapIdList)
         {
-            var data = LsProtocol.EncodeSubscribeMapIds(mapIdList);
-            _wsRealData.SendAsync(data);
+            if (_wsRealData != null)
+            {
+                var data = LsProtocol.EncodeSubscribeMapIds(mapIdList);
+                _wsRealData.SendAsync(data);
+            }
+            else
+                throw new Exception("WebSocket not instantiated!");
         }
 
         public string WebsocketSdkVersion()
         {
-            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            if (version != null)
+                return version.ToString();
+            else
+                return "";
         }
 
         private WatsonWsClient InternalConnect(string subProtocol)
@@ -179,7 +208,7 @@ namespace LsWebsocketClient
             return ws;
         }
 
-        private void HandleOpen(object sender, EventArgs eventArgs)
+        private void HandleOpen(object? sender, EventArgs eventArgs)
         {
             if (sender == _wsCtrl)
             {
@@ -198,7 +227,7 @@ namespace LsWebsocketClient
                 _lsWebsocketParams.Password, _lsWebsocketParams.Salt));
         }
 
-        private void HandleClose(object sender, EventArgs eventArgs)
+        private void HandleClose(object? sender, EventArgs eventArgs)
         {
             if (sender == _wsCtrl)
             {
@@ -219,7 +248,7 @@ namespace LsWebsocketClient
             Thread.Sleep(_lsWebsocketParams.ReconnectInterval * 1000);
             if (sender != null && !((WatsonWsClient)sender).Connected)
             {
-                ((WatsonWsClient)sender).Start();
+                ((WatsonWsClient)sender).StartAsync();
             }
         }
 
