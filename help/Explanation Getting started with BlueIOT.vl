@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="FFYUd6LIyMkMRyEP06PP0l" LanguageVersion="2024.6.5" Version="0.128">
-  <NugetDependency Id="J5PFRfHtSZMNC0zfiIIIet" Location="VL.CoreLib" Version="2024.6.5" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="FFYUd6LIyMkMRyEP06PP0l" LanguageVersion="2025.7.0-0524-g84cdec8294" Version="0.128">
+  <NugetDependency Id="J5PFRfHtSZMNC0zfiIIIet" Location="VL.CoreLib" Version="2025.7.0-0524-g84cdec8294" />
   <Patch Id="NUBe8NqAL2GMxWdacl3vya">
     <Canvas Id="GtbeV4cybmyPHHOx974pit" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -30,15 +30,15 @@
             <Pin Id="RFN10zTlcLFN750dsL9l3n" Name="Is Wss" Kind="InputPin" />
             <Pin Id="MrW0XY7HvqjPbbGf0bf3Vl" Name="Enabled" Kind="InputPin" />
             <Pin Id="Er7kRj7AZqgO5gvYSGm9T1" Name="Output" Kind="OutputPin" />
-            <Pin Id="U3krjG8iMpALoQlAx1jipx" Name="Tags" Kind="OutputPin" />
+            <Pin Id="MXPaj1eCKdqPavLNgaxQKY" Name="Tag" Kind="OutputPin" />
             <Pin Id="N9rVO1ocXckMBQHrWorYRX" Name="Status" Kind="OutputPin" />
           </Node>
-          <Pad Id="L9V6sbmZYj1MfSCFLkSYwc" Comment="IP" Bounds="289,189,94,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
+          <Pad Id="L9V6sbmZYj1MfSCFLkSYwc" Comment="IP" Bounds="295,171,94,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="JRb4GWvrAxMMTGun6rxbA6" Comment="Port" Bounds="323,212,56,15" ShowValueBox="true" isIOBox="true" Value="48300">
+          <Pad Id="JRb4GWvrAxMMTGun6rxbA6" Comment="Port" Bounds="315,211,56,15" ShowValueBox="true" isIOBox="true" Value="48300">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
@@ -58,56 +58,6 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="341,364,329,80" Id="RmfgvwRUUwjOcZoBkDUoSV">
-            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
-            </p:NodeReference>
-            <Pin Id="R9sTiAzexFSMIv3lJN80Ku" Name="Break" Kind="OutputPin" />
-            <ControlPoint Id="NpXMUJHzQyvQTJxFQD6v7G" Bounds="355,370" Alignment="Top" />
-            <ControlPoint Id="DEwJejlhVQuMb8qZyziGgu" Bounds="355,438" Alignment="Bottom" />
-            <ControlPoint Id="TzkUYC9IF5VP5Hpf3PN6p2" Bounds="395,438" Alignment="Bottom" />
-            <ControlPoint Id="UxYgYFfpIdeNpNOTVVz6ET" Bounds="615,438" Alignment="Bottom" />
-            <Patch Id="FOsyiklkC6JNEii6Mhlefn" ManuallySortedPins="true">
-              <Patch Id="QnxTCVuor0ENwm0mVsmdUc" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="FD1CFil2XNjMHSizf1hwss" Name="Update" ManuallySortedPins="true" />
-              <Patch Id="N0TwUqe3SItNb9DlmQ8cZ8" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="353,390,305,26" Id="Bc4hJGwIKFsNyLRqpeXAb4">
-                <p:NodeReference LastCategoryFullName="IO.BlueIOT.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="RecordType" Name="Tag" />
-                  <Choice Kind="OperationCallFlag" Name="Split" />
-                </p:NodeReference>
-                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
-                <Pin Id="IsgSxWNzI7lNNpeJcxpEp9" Name="Input" Kind="StateInputPin" />
-                <Pin Id="F4nNbnLjsO3Mf9XpWhiSJY" Name="Output" Kind="OutputPin" IsHidden="true" />
-                <Pin Id="D1L419hALWfM3Gw9ISnsAt" Name="Id" Kind="OutputPin" />
-                <Pin Id="H2Xtop6cI11PEyC1FfhaAG" Name="Hex Id" Kind="OutputPin" />
-                <Pin Id="Di5zJdC8GwsNMzsI9WYoGH" Name="Position" Kind="OutputPin" />
-                <Pin Id="CQsUtT9kB0XLMdRFLGLQqh" Name="Name" Kind="OutputPin" />
-                <Pin Id="ACsXpnpDsVvMYw8c8k1YEC" Name="Z" Kind="OutputPin" />
-                <Pin Id="Hh5Ttw1ivrdLg3eaZ3qL0l" Name="Group Name" Kind="OutputPin" />
-                <Pin Id="MzyxbkOcw4wQbcDWRpGUs0" Name="Capacity" Kind="OutputPin" />
-                <Pin Id="HsYUydum89DMPdhD2FSYju" Name="Charge" Kind="OutputPin" />
-                <Pin Id="KaLIcj6VBfnL7T7YEh7q5m" Name="Sleep" Kind="OutputPin" />
-                <Pin Id="FjW2BcfLR0QLmM32negyMm" Name="MapId" Kind="OutputPin" />
-                <Pin Id="Uakl4IhXtLUN7YCb77eP93" Name="FloorNo" Kind="OutputPin" />
-                <Pin Id="NddhCfRjoSsMBgKNwAcIvD" Name="TimeStamp" Kind="OutputPin" />
-                <Pin Id="LdIUXwq73ciL4TuCqisD5D" Name="Indicator" Kind="OutputPin" />
-                <Pin Id="CUBowgu6HtzNXb7P479n3k" Name="HeartRate" Kind="OutputPin" />
-                <Pin Id="HBRBjkcoEIINLlRzyUG2s0" Name="Extern Data" Kind="OutputPin" />
-                <Pin Id="TsdwxpmVWVJO6uMwvG7Hs6" Name="CustomIot" Kind="OutputPin" />
-              </Node>
-            </Patch>
-            <ControlPoint Id="NIvLRNNhtbaOjjGSwgHKsv" Bounds="515,438" Alignment="Bottom" />
-            <ControlPoint Id="RBkZGC3QjIiOAwTepzLfgR" Bounds="575,438" Alignment="Bottom" />
-          </Node>
-          <Pad Id="RoLUzXgl3oLNKy9xBnbSwT" Comment="" Bounds="354,499,97,80" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="E4ITIpotwtpOHthHw3ERvB" Comment="" Bounds="479,499,92,80" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="VbO5wLHmiicLGWNZHdyoUO" Comment="HeartRate" Bounds="738,499,35,80" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="DGui6pMh7Z1NF7GCt5x53k" Comment="" Bounds="595,499,35,80" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="R1oNpWoBmJKQRufj4MIFfn" Comment="" Bounds="654,499,50,80" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="293,685,67,26" Id="G88dLZAmbxJLDuRkJR9B6E">
             <p:NodeReference LastCategoryFullName="IO.BlueIOT.BlueIOT" LastDependency="VL.BlueIOT.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -125,7 +75,7 @@
               <Choice Kind="TypeFlag" Name="Integer64 (Unsigned)" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="C5B0Mv4e9n0QccY9lCRqNq" Comment="Control Type" Bounds="337,634,133,15" ShowValueBox="true" isIOBox="true" Value="ControlTypeVibrateBuzz">
+          <Pad Id="C5B0Mv4e9n0QccY9lCRqNq" Comment="Control Type" Bounds="337,634,140,15" ShowValueBox="true" isIOBox="true" Value="ControlTypeVibrateBuzz">
             <p:TypeAnnotation LastCategoryFullName="LsWebsocketClient" LastDependency="VL.BlueIOT.vl">
               <Choice Kind="TypeFlag" Name="LsTagControlType" />
             </p:TypeAnnotation>
@@ -138,12 +88,70 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="JyVXf5fNwkmLspdbNRQ3QL" Comment="Enabled" Bounds="450,276,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="JyVXf5fNwkmLspdbNRQ3QL" Comment="Enabled" Bounds="415,280,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="353,365,329,132" Id="PnWLQrfkUAIPiLvTndEXAq">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="I6SfRs6esn8NcncuWVQMDc" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HiDGpzihGyiNDoRbD7pE5k" Name="Messages" Kind="InputPin" />
+            <Pin Id="Dq8SLX3NCaSM8a2Ddm4oAG" Name="Reset" Kind="InputPin" />
+            <Pin Id="FTml1mj3ceaLwyQGH5nu0S" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="CVpKzTRRZUlNRLfHwlxDlm" Name="Result" Kind="OutputPin" />
+            <Patch Id="RHIlQuQWNUxOTJX55Ie1sG" ManuallySortedPins="true">
+              <Patch Id="Fefl0shgaHZOb3K0fYsXLu" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="HiahKNFUh8tNwrXmBiwzwx" Name="Update" ManuallySortedPins="true">
+                <Pin Id="TiOUPBE6ekDMX4bQJcpJAq" Name="Input 1" Kind="InputPin" />
+                <Pin Id="HzfMhS8nT7lN5zaWKgGYgE" Name="Output" Kind="OutputPin" />
+              </Patch>
+              <ControlPoint Id="AwujZz2XZs3L2f90NB0AfY" Bounds="367,373" />
+              <ControlPoint Id="SEgaGSytds1PiNDdKiygCU" Bounds="366,490" />
+              <Node Bounds="365,400,305,26" Id="Bc4hJGwIKFsNyLRqpeXAb4">
+                <p:NodeReference LastCategoryFullName="IO.BlueIOT.BlueIOT.Tag" LastDependency="VL.BlueIOT.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="RecordType" Name="Tag" />
+                  <Choice Kind="OperationCallFlag" Name="Split" />
+                </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+                <Pin Id="IsgSxWNzI7lNNpeJcxpEp9" Name="Input" Kind="StateInputPin" />
+                <Pin Id="F4nNbnLjsO3Mf9XpWhiSJY" Name="Output" Kind="OutputPin" IsHidden="true" />
+                <Pin Id="D1L419hALWfM3Gw9ISnsAt" Name="Id" Kind="OutputPin" />
+                <Pin Id="H2Xtop6cI11PEyC1FfhaAG" Name="Hex Id" Kind="OutputPin" />
+                <Pin Id="Di5zJdC8GwsNMzsI9WYoGH" Name="Position" Kind="OutputPin" />
+                <Pin Id="ACsXpnpDsVvMYw8c8k1YEC" Name="Z" Kind="OutputPin" />
+                <Pin Id="MzyxbkOcw4wQbcDWRpGUs0" Name="Capacity" Kind="OutputPin" />
+                <Pin Id="HsYUydum89DMPdhD2FSYju" Name="Charge" Kind="OutputPin" />
+                <Pin Id="KaLIcj6VBfnL7T7YEh7q5m" Name="Sleep" Kind="OutputPin" />
+                <Pin Id="FjW2BcfLR0QLmM32negyMm" Name="MapId" Kind="OutputPin" />
+                <Pin Id="Uakl4IhXtLUN7YCb77eP93" Name="FloorNo" Kind="OutputPin" />
+                <Pin Id="NddhCfRjoSsMBgKNwAcIvD" Name="TimeStamp" Kind="OutputPin" />
+                <Pin Id="LdIUXwq73ciL4TuCqisD5D" Name="Indicator" Kind="OutputPin" />
+                <Pin Id="CUBowgu6HtzNXb7P479n3k" Name="HeartRate" Kind="OutputPin" />
+                <Pin Id="HBRBjkcoEIINLlRzyUG2s0" Name="Extern Data" Kind="OutputPin" />
+                <Pin Id="TsdwxpmVWVJO6uMwvG7Hs6" Name="CustomIot" Kind="OutputPin" />
+                <Pin Id="CQsUtT9kB0XLMdRFLGLQqh" Name="Name" Kind="OutputPin" />
+                <Pin Id="Hh5Ttw1ivrdLg3eaZ3qL0l" Name="Group Name" Kind="OutputPin" />
+              </Node>
+              <Pad Id="TpryO3g1psIL7GInvzPSIB" Comment="Id" Bounds="380,450,35,15" ShowValueBox="true" isIOBox="true" />
+            </Patch>
+          </Node>
+          <Pad Id="Th4dwNAHA4LL8QCHxupX9V" Comment="Status" Bounds="415,350,154,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="FN5OQDZ4Q4KOuqzo7iMSCg" Bounds="691,403,242,154" ShowValueBox="true" isIOBox="true" Value="Tags received by the BlueIOT node always have an Id, but other properties are optional per transmission!&#xD;&#xA;&#xD;&#xA;So if you want to know a Tags full state, you need to collect properties as they come in over time and hold your own state.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
         </Canvas>
@@ -156,17 +164,6 @@
         <Link Id="Jm9diaMlXfTLH5Fwq9G8gi" Ids="QBMzQNyg3J5MS6V5lVC91p,Jq5txR52k6rOq0xvqYDNw2" />
         <Link Id="KT19vqRNwP6L8hiWrCqlok" Ids="U8ZdCee3FkRPJf1mqLG2s8,Rs2TRyo53uUMxs0JdFrpvg" />
         <Link Id="AKHSoXMrdqfMDErwNW8a4W" Ids="OuESgPNQ6QKNI0eR0vnA5g,QzNZxTRoVsfLg8xRJV3Tg3" />
-        <Link Id="H6a7DGkTRT6QIxtuE6qz60" Ids="DEwJejlhVQuMb8qZyziGgu,RoLUzXgl3oLNKy9xBnbSwT" />
-        <Link Id="NmtCyfYgKxeOAZ2Yfsy5xW" Ids="Di5zJdC8GwsNMzsI9WYoGH,TzkUYC9IF5VP5Hpf3PN6p2" />
-        <Link Id="TelgPIWybqhLlR6hrN7FLL" Ids="TzkUYC9IF5VP5Hpf3PN6p2,E4ITIpotwtpOHthHw3ERvB" />
-        <Link Id="MQsm6RV4yKgM7E7zgCSChf" Ids="CUBowgu6HtzNXb7P479n3k,UxYgYFfpIdeNpNOTVVz6ET" />
-        <Link Id="FdzK5j26HoSNArRb0cwnzb" Ids="UxYgYFfpIdeNpNOTVVz6ET,VbO5wLHmiicLGWNZHdyoUO" />
-        <Link Id="BlFGqaGhRSQOy3BiSkdTxC" Ids="NpXMUJHzQyvQTJxFQD6v7G,IsgSxWNzI7lNNpeJcxpEp9" />
-        <Link Id="K6Z1Y3vRNxyPSsY8feSxhR" Ids="KaLIcj6VBfnL7T7YEh7q5m,NIvLRNNhtbaOjjGSwgHKsv" />
-        <Link Id="RqcmeOb5VNoMQGPkjdMB2g" Ids="NIvLRNNhtbaOjjGSwgHKsv,DGui6pMh7Z1NF7GCt5x53k" />
-        <Link Id="Lzb7RuivildOrJKai32tVp" Ids="NddhCfRjoSsMBgKNwAcIvD,RBkZGC3QjIiOAwTepzLfgR" />
-        <Link Id="IKkVIDa3TguQWKuUWfQDE0" Ids="RBkZGC3QjIiOAwTepzLfgR,R1oNpWoBmJKQRufj4MIFfn" />
-        <Link Id="HYcRv9hTW5EM7vT6rXEtW7" Ids="U3krjG8iMpALoQlAx1jipx,NpXMUJHzQyvQTJxFQD6v7G" />
         <Link Id="UzsH4mYPj5tOF6QXCs7gBd" Ids="MGXYk34NhfJMWKqtUW60q2,KGsETnFWKK1NcMWF9HWSrO" />
         <Link Id="R2vfQMGs1nIN70PcnrLL7U" Ids="C5B0Mv4e9n0QccY9lCRqNq,EAOHB3hOr2FNVdMdKllP8l" />
         <Link Id="BmfzRa7CiXTNGOtGaCzpIB" Ids="ROJ2RLnQE3RNH80wswlirj,Hr8eXC81FTILoLhsSyxr0d" />
@@ -174,7 +171,13 @@
         <Link Id="BJSVMdPlMJ8PnI433WlEgd" Ids="JyVXf5fNwkmLspdbNRQ3QL,MrW0XY7HvqjPbbGf0bf3Vl" />
         <Link Id="D66kOU0k9yUO3QHMxDRBZe" Ids="L9V6sbmZYj1MfSCFLkSYwc,CrEYaw4SGDEPXfmL4x63Hs" />
         <Link Id="TvWubR0eWhGNE1vshpLX6M" Ids="JRb4GWvrAxMMTGun6rxbA6,Ru1w8nyGBhuM4mtTTxOQRM" />
-        <Link Id="E6gYVMtldeuMdSz46UCqxK" Ids="H2Xtop6cI11PEyC1FfhaAG,DEwJejlhVQuMb8qZyziGgu" />
+        <Link Id="UnBOI4SScNlM8Mrft9tyak" Ids="TiOUPBE6ekDMX4bQJcpJAq,AwujZz2XZs3L2f90NB0AfY" IsHidden="true" />
+        <Link Id="Fz5d3eIE93eNF3K1bWEx2d" Ids="SEgaGSytds1PiNDdKiygCU,HzfMhS8nT7lN5zaWKgGYgE" IsHidden="true" />
+        <Link Id="SVBCVwkX6fWPHVaom2sJuP" Ids="MXPaj1eCKdqPavLNgaxQKY,HiDGpzihGyiNDoRbD7pE5k" />
+        <Link Id="Ol5blq529pGN29a5cUykaT" Ids="N9rVO1ocXckMBQHrWorYRX,Th4dwNAHA4LL8QCHxupX9V" />
+        <Link Id="IaCquqtv7XxOtTcaNGEk8h" Ids="AwujZz2XZs3L2f90NB0AfY,IsgSxWNzI7lNNpeJcxpEp9" />
+        <Link Id="EYAHYzBoJ2jOQQrMg2D6gy" Ids="D1L419hALWfM3Gw9ISnsAt,SEgaGSytds1PiNDdKiygCU" />
+        <Link Id="JDyGivx7ThrMzpcDkrJ6Sc" Ids="D1L419hALWfM3Gw9ISnsAt,TpryO3g1psIL7GInvzPSIB" />
       </Patch>
     </Node>
   </Patch>
