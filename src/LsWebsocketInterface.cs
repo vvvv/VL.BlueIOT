@@ -327,7 +327,7 @@ namespace LsWebsocketClient
                         LsProtocol.DecodeCustomIot(data));
                     break;
 				case LsFrameType.FrameTypeVitalSignData:
-                    MessageEvent(type, LsProtocol.DecodeVitalSignData(data));
+                    InvokeMessageEvent(type, LsProtocol.DecodeVitalSignData(data));
                     break;
             }
         }
